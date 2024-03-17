@@ -1,0 +1,11 @@
+.carousel_container {
+  width: 100%; }
+
+.carousel_wrapper {
+  width: 300vw;
+  display: flex; }
+
+.carousel_item {
+  width: 100vw; }
+
+/*# sourceMappingURL=CarouselSlide.module.css.map */
