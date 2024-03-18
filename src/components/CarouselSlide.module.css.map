@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,mBAAoB;EAChB,KAAK,EAAE,IAAI;;AAGf,iBAAkB;EACd,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,IAAI;;AAGjB,cAAe;EACX,KAAK,EAAE,KAAK",
+"mappings": "AAAA,kBAAmB;EACf,KAAK,EAAE,KAAK;EACZ,QAAQ,EAAE,MAAM;EAChB,OAAO,EAAE,IAAI;;AAGjB,mBAAoB;EAChB,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,IAAI;;AAGjB,cAAe;EACX,KAAK,EAAE,KAAK",
 "sources": ["CarouselSlide.module.scss"],
 "names": [],
 "file": "CarouselSlide.module.css"

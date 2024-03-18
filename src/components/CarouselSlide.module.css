@@ -1,7 +1,9 @@
-.carousel_container {
-  width: 100%; }
+.carousel_viewport {
+  width: 100vw;
+  overflow: hidden;
+  display: flex; }
 
-.carousel_wrapper {
+.carousel_container {
   width: 300vw;
   display: flex; }
 
