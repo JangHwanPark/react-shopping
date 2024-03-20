@@ -1,12 +1,12 @@
 import './App.css';
 import Header from "./components/Header";
-import CarouselSlide from "./components/CarouselSlide";
+import {Outlet} from "react-router-dom";
 
 function App() {
     return (
         <div className="container">
             <Header/>
-            <CarouselSlide/>
+            <Outlet/>
         </div>
     );
 }
