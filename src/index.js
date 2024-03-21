@@ -8,6 +8,9 @@ import NotFound from "./page/NotFound";
 import Home from "./page/Home";
 import Models from "./page/Models";
 import ModelsDetail from "./page/ModelsDetail";
+import Lounge from "./page/Lounge";
+import TestDrive from "./page/TestDrive";
+import Login from "./page/Login";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +21,9 @@ const router = createBrowserRouter([
             {index:true, element: <Home/>},
             {path: '/model', element: <Models/>},
             {path: '/model/:modelId', element: <ModelsDetail/>},
+            {path: '/test-drive', element: <TestDrive/>},
+            {path: '/lounge', element: <Lounge/>},
+            {path: '/login', element: <Login/>},
         ]
     }
 ])

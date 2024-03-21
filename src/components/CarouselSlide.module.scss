@@ -1,5 +1,5 @@
 .carousel_viewport {
-    width: 100vw;
+    width: calc(100vw - (100vw - 100%));
     overflow: hidden;
     display: flex;
 }
