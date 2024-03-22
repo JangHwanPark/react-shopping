@@ -1,7 +1,7 @@
 .carousel_viewport {
     width: calc(100vw - (100vw - 100%));
-    overflow: hidden;
     display: flex;
+    overflow: hidden;
 }
 
 .carousel_container {
