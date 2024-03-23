@@ -10,7 +10,7 @@ import Models from "./page/Models";
 import ModelsDetail from "./page/ModelsDetail";
 import Lounge from "./page/Lounge";
 import TestDrive from "./page/TestDrive";
-import Login from "./page/Login";
+import Authentication from "./page/Authentication";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {path: '/model/:modelId', element: <ModelsDetail/>},
             {path: '/test-drive', element: <TestDrive/>},
             {path: '/lounge', element: <Lounge/>},
-            {path: '/login', element: <Login/>},
+            {path: '/login', element: <Authentication/>},
         ]
     }
 ])
