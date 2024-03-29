@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styles from './CarouselSlide.module.css';
-import {logDOM} from "@testing-library/react";
 
 export default function CarouselSlide(props) {
     const test = [

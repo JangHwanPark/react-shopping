@@ -1,21 +1,26 @@
 import React, {useEffect, useState} from 'react';
-import {handleGoogleLogin, handleSignOut, onAuthStateChanged} from '../service/auth';
-import {useAuth} from "../context/AuthContext";
+//import {useAuth} from "../context/AuthContext";
+import {handleGoogleLogin, handleSignOut, onUserStateChanged} from "../service/fbInstance";
 
 export default function Authentication() {
     // Context Data 가져오기
-    const {user, signIn, signOut} = useAuth();
+    //const {user} = useAuth();
+    const [user, setUser] = useState();
 
-    // 사용자가 버튼을 클릭했을 때 실행할 함수
-    const handleAuthAction = () => {
-        if (user) signOut();
-        else signIn();
-    };
+    useEffect(() => {
+        onUserStateChanged((user) => {
+            console.log(user);
+            setUser(user);
+        });
+    }, []);
 
     return (
         <div>
-            <button onClick={handleAuthAction}>
-                구글{user ? '로그아웃' : '로그인'}
+            <button onClick={handleGoogleLogin}>
+                구글 로그인
+            </button>
+            <button onClick={handleSignOut}>
+                구글 로그아웃
             </button>
             <div>{user ? user.displayName : "로그인하세요"}</div>
         </div>
