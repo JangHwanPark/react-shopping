@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 import {Link} from "react-router-dom";
-import {route} from "../data";
+import HeaderItem from "./HeaderItem";
 
 export default function Header() {
     return (
@@ -12,21 +12,9 @@ export default function Header() {
                 </Link>
                 <div className={styles.glb_wrap}>
                     <nav className={styles.global_navigation}>
-                        <ul className={styles.item_list}>
-                            {route.slice(0, 4).map(({href, label, id}) => (
-                                <li key={id} className={styles.item}>
-                                    <Link to={href}>{label}</Link>
-                                </li>
-                            ))}
-                        </ul>
+                        <HeaderItem sliceStart={0} sliceEnd={4}/>
                     </nav>
-                    <ul className={styles.item_list}>
-                        {route.slice(4).map(({href, label, id}) => (
-                            <li key={id} className={styles.item}>
-                                <Link to={href}>{label}</Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <HeaderItem sliceStart={4}/>
                 </div>
             </div>
         </header>
