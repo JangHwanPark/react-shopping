@@ -1,26 +1,29 @@
-import React, {useState} from 'react';
-import {auth} from '../service/fbInstance';
-import {GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+import React, {useEffect, useState} from 'react';
+import {handleGoogleLogin, handleSignOut, onAuthStateChanged} from '../service/auth';
 
-export default function Authentication(props) {
+export default function Authentication() {
     const [userData, setUserData] = useState(null);
 
-    // 구글 로그인 핸들러 함수
-    const handleGoogleLogin = () => {
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider) // 팝업을 이용해 회원가입
-            .then(data => {
-                setUserData(data.user); // 유저 데이터 설정
-                console.log(data);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+    useEffect(() => {
+        // 리스너 등록: 사용자 상태 변경 시 사용자 데이터를 업데이트
+        const unsubscribe = onAuthStateChanged(user => {
+            setUserData(user);
+        });
+
+        // 클린업 함수: 컴포넌트 언마운트 시 리스너 해제
+        return () => unsubscribe();
+    }, []);
+
+    const loginOrLogout = async () => {
+        if (userData) await handleSignOut();
+        else await handleGoogleLogin();
+    };
 
     return (
         <div>
-            <button onClick={handleGoogleLogin}>구글</button>
+            <button onClick={loginOrLogout}>
+                구글{userData ? '로그아웃' : '로그인'}
+            </button>
             <div>{userData ? userData.displayName : "로그인하세요"}</div>
         </div>
     );
