@@ -1,5 +1,6 @@
 .flex {
   display: flex;
+  border-top: 1px solid black;
 }
 
 .footer {
@@ -17,4 +18,8 @@
 
 .service {
   gap: 1rem;
+}
+
+.footer_item a span {
+  font-size: 1.15rem;
 }

@@ -36,7 +36,8 @@ export const handleSignOut = () => {
 
 // 사용자 상태 변경(Session 상태 변경)시 호출될 콜백 함수를 매개변수로 받는 함수
 export const onUserStateChanged = (callback) => {
-    onAuthStateChanged(auth, async (user) => {
+    return onAuthStateChanged(auth, async (user) => {
+        // 사용자 상태 변화
         // 1. 세션이 존재하는 경우 (로그인한 경우)
         const updatedUser = user ? await adminUser(user) : null;
         callback(updatedUser);
@@ -53,7 +54,7 @@ const adminUser = async (user) => {
                 const admin = snapshot.val();
                 console.log('admins : ', admin);
                 const isAdmin = admin.includes(user.uid);
-                console.log(isAdmin);
+                console.log('isAdmin : ' , isAdmin);
                 return {...user, isAdmin };
             }
         })

@@ -1,18 +1,10 @@
-import React, {useEffect, useState} from 'react';
-//import {useAuth} from "../context/AuthContext";
-import {handleGoogleLogin, handleSignOut, onUserStateChanged} from "../service/fbInstance";
+import React from 'react';
+import {useAuth} from "../context/AuthContext";
+import {handleGoogleLogin, handleSignOut} from "../service/fbInstance";
 
 export default function Authentication() {
     // Context Data 가져오기
-    //const {user} = useAuth();
-    const [user, setUser] = useState();
-
-    useEffect(() => {
-        onUserStateChanged((user) => {
-            console.log(user);
-            setUser(user);
-        });
-    }, []);
+    const {user} = useAuth();
 
     return (
         <div>

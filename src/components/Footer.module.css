@@ -1,5 +1,6 @@
 .flex {
-  display: flex; }
+  display: flex;
+  border-top: 1px solid black; }
 
 .footer {
   width: 100%; }
@@ -13,5 +14,8 @@
 
 .service {
   gap: 1rem; }
+
+.footer_item a span {
+  font-size: 1.15rem; }
 
 /*# sourceMappingURL=Footer.module.css.map */
