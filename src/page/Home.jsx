@@ -6,9 +6,10 @@ export default function Home(props) {
         <div className={'contents'}>
             <CarouselSlide/>
             <div>
-                <div>img1</div>
-                <div>img2</div>
-                <div>img3</div>
+                <div>ES</div>
+                <div>RX</div>
+                <div>NX</div>
+                <div>LC</div>
             </div>
         </div>
     );

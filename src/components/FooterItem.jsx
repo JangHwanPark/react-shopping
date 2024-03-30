@@ -6,7 +6,7 @@ export default function FooterItem({title, items}) {
     return (
         <div className={styles.list_wrap}>
             <h2 className={styles.list_title}>{title}</h2>
-            <ul className={styles.footer_list}>
+            <ul className={styles.list_footer}>
                 {items.map(({id, href, label}) => (
                     <li key={id} className={styles.footer_item}>
                         <Link to={href}><span>{label}</span></Link>

@@ -8,6 +8,10 @@
 }
 
 .inner_wrap {
+  padding: 0 3rem;
+}
+
+.footer_top {
   align-items: center;
   justify-content: space-around;
 }
@@ -18,6 +22,10 @@
 
 .service {
   gap: 1rem;
+}
+
+.list_wrap {
+  width: 250px;
 }
 
 .footer_item a span {

@@ -1,0 +1,44 @@
+{
+  "LexusVehicles": [
+    {
+      "model": "RX",
+      "type": "SUV",
+      "engineType": "3.5L V6",
+      "fuelType": "Gasoline",
+      "maxPowerHP": 295,
+      "basePriceUSD": 45000
+    },
+    {
+      "model": "ES",
+      "type": "Sedan",
+      "engineType": "2.5L 4-Cylinder",
+      "fuelType": "Gasoline",
+      "maxPowerHP": 203,
+      "basePriceUSD": 40000
+    },
+    {
+      "model": "NX",
+      "type": "Compact SUV",
+      "engineType": "2.4L Turbo",
+      "fuelType": "Gasoline",
+      "maxPowerHP": 275,
+      "basePriceUSD": 37000
+    },
+    {
+      "model": "UX",
+      "type": "Subcompact SUV",
+      "engineType": "2.0L 4-Cylinder",
+      "fuelType": "Hybrid",
+      "maxPowerHP": 181,
+      "basePriceUSD": 33000
+    },
+    {
+      "model": "LC",
+      "type": "Coupe",
+      "engineType": "5.0L V8",
+      "fuelType": "Gasoline",
+      "maxPowerHP": 471,
+      "basePriceUSD": 93000
+    }
+  ]
+}
