@@ -6,7 +6,7 @@
     "fuelType": "Gasoline",
     "maxPowerHP": 295,
     "basePrice": 98700000,
-    "img": "src/assets/product/RX450h_plus_SonicQuartz.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/RX450h_plus_SonicQuartz.png"
   },
   {
     "name": "ES",
@@ -15,7 +15,7 @@
     "fuelType": "Gasoline",
     "maxPowerHP": 203,
     "basePrice": 66900000,
-    "img": "src/assets/product/ES300h_Iridium_2.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/ES300h_Iridium_2.png"
   },
   {
     "name": "NX",
@@ -24,7 +24,7 @@
     "fuelType": "Gasoline",
     "maxPowerHP": 275,
     "basePrice": 76300000,
-    "img": "src/assets/assets/product/NX450hplus.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/NX450hplus.png"
   },
   {
     "name": "UX",
@@ -33,7 +33,7 @@
     "fuelType": "Hybrid",
     "maxPowerHP": 181,
     "basePrice": 50900000,
-    "img": "src/assets/product/UX250h_2WD_blazing_Carnelian_Contrast_Layering.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/UX250h_2WD_blazing_Carnelian_Contrast_Layering.png"
   },
   {
     "name": "LC",
@@ -42,6 +42,6 @@
     "fuelType": "Gasoline",
     "maxPowerHP": 471,
     "basePrice": 192400000,
-    "img": "src/assets/product/LC500_pc.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/LC500_pc.png"
   }
 ]
