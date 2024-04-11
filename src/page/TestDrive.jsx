@@ -1,5 +1,5 @@
 import React from 'react';
-import model from '../data/model.json';
+import models from '../data/models.json';
 import showRooms from '../data/lexus_showrooms_korea.json';
 import months from '../data/month.json';
 import LexusShowroomSelect from "../components/LexusShowroomSelect";
@@ -16,7 +16,7 @@ export default function TestDrive() {
             <section>
                 <h2>시승 차량 선택</h2>
                 <div>모델 명칭</div>
-                {model.LexusVehicles.map(({model}) => (
+                {models.map(({model}) => (
                     <div>{model}</div>
                 ))}
                 <div>명칭에 따른 모델 출력</div>
@@ -41,9 +41,9 @@ export default function TestDrive() {
                             </option>
                         ))}
                     </select>
-                    이름
+                    <label htmlFor="">이름</label>
                     <UserInputBox type="text" placeholder={"이름을 입력하세요."}/>
-                    전화번호
+                    <label htmlFor="">전화번호</label>
                     <UserInputBox type="text" placeholder={"전화번호를 입력하세요."}/>
                 </div>
             </section>

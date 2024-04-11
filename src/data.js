@@ -10,7 +10,6 @@ export const models = [
 
 export const route = [
     { href: '/model', label: 'MODEL', id: 'model' },
-    { href: '/purchase', label: 'BUY', id: 'buy' },
     { href: '/test-drive', label: '시승신청', id: 'test-drive' },
     { href: '/lounge', label: 'LEXUS LOUNGE', id: 'lexus-lounge' },
     { href: '/login', label: 'LOGIN', id: 'login' },

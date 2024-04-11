@@ -1,0 +1,47 @@
+[
+  {
+    "name": "RX",
+    "type": "SUV",
+    "engineType": "3.5L V6",
+    "fuelType": "Gasoline",
+    "maxPowerHP": 295,
+    "basePrice": 98700000,
+    "img": "src/assets/product/RX450h_plus_SonicQuartz.png"
+  },
+  {
+    "name": "ES",
+    "type": "Sedan",
+    "engineType": "2.5L 4-Cylinder",
+    "fuelType": "Gasoline",
+    "maxPowerHP": 203,
+    "basePrice": 66900000,
+    "img": "src/assets/product/ES300h_Iridium_2.png"
+  },
+  {
+    "name": "NX",
+    "type": "Compact SUV",
+    "engineType": "2.4L Turbo",
+    "fuelType": "Gasoline",
+    "maxPowerHP": 275,
+    "basePrice": 76300000,
+    "img": "src/assets/assets/product/NX450hplus.png"
+  },
+  {
+    "name": "UX",
+    "type": "Subcompact SUV",
+    "engineType": "2.0L 4-Cylinder",
+    "fuelType": "Hybrid",
+    "maxPowerHP": 181,
+    "basePrice": 50900000,
+    "img": "src/assets/product/UX250h_2WD_blazing_Carnelian_Contrast_Layering.png"
+  },
+  {
+    "name": "LC",
+    "type": "Coupe",
+    "engineType": "5.0L V8",
+    "fuelType": "Gasoline",
+    "maxPowerHP": 471,
+    "basePrice": 192400000,
+    "img": "src/assets/product/LC500_pc.png"
+  }
+]

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from "./Header.module.css";
-import {route} from "../data";
+import {route} from "../../data";
 import {Link} from "react-router-dom";
-import {useAuth} from "../context/AuthContext";
+import {useAuth} from "../../context/AuthContext";
 
 export default function HeaderItem({sliceStart, sliceEnd}) {
     const {user} = useAuth();

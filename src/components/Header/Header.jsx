@@ -12,9 +12,9 @@ export default function Header() {
                 </Link>
                 <div className={styles.glb_wrap}>
                     <nav className={styles.global_navigation}>
-                        <HeaderItem sliceStart={0} sliceEnd={3}/>
+                        <HeaderItem sliceStart={0} sliceEnd={2}/>
                     </nav>
-                    <HeaderItem sliceStart={3}/>
+                    <HeaderItem sliceStart={2}/>
                 </div>
             </div>
         </header>

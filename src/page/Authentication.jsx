@@ -1,6 +1,6 @@
 import React from 'react';
 import {useAuth} from "../context/AuthContext";
-import {handleGoogleLogin, handleSignOut} from "../service/fbInstance";
+import {handleGoogleLogin, handleSignOut} from "../utils/fbInstance";
 
 export default function Authentication() {
     // Context Data 가져오기

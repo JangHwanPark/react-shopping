@@ -1,15 +1,16 @@
 import React from 'react';
-import CarouselSlide from "../components/CarouselSlide";
+import models from '../data/models.json';
+import CarouselSlide from "../components/CarouselSlide/CarouselSlide";
+import Product from "../components/Products/Product";
 
-export default function Home(props) {
+export default function Home() {
     return (
         <div className={'contents'}>
             <CarouselSlide/>
             <div>
-                <div>ES</div>
-                <div>RX</div>
-                <div>NX</div>
-                <div>LC</div>
+                {models.map((model, index) => (
+                    <Product model={model} key={index}/>
+                ))}
             </div>
         </div>
     );

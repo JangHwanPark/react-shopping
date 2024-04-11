@@ -1,5 +1,5 @@
 import {createContext, useContext, useEffect, useState} from "react";
-import {onUserStateChanged} from "../service/fbInstance";
+import {onUserStateChanged} from "../utils/fbInstance";
 
 // ContextAPI 생성
 const AuthContext = createContext();

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import {models, service} from '../data';
+import {models, service} from '../../data';
 import FooterItem from "./FooterItem";
 
 export default function Footer() {
