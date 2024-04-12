@@ -1,14 +1,14 @@
 import React from 'react';
 
 // import Components
-import VehicleSelector from "../components/VehicleSelector/VehicleSelector";
+import TabView from "../components/TabView/TabView";
 import ProductInformation from "../components/ProductsInformation/ProductInformation";
 import Button from "../components/Button/Button";
 
 export default function Models() {
     return (
         <main>
-            <VehicleSelector title={'구매'}/>
+            <TabView title={'구매'}/>
             <ProductInformation/>
             <Button title={'구매하기'}/>
             <Button title={'시승신청'}/>

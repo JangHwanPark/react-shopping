@@ -8,7 +8,7 @@ import useMonthDayPicker from "../hooks/useMonthDayPicker";
 // import Components
 import LexusShowroomSelect from "../components/LexusShowroomSelect/LexusShowroomSelect";
 import Input from "../components/Input/Input";
-import VehicleSelector from "../components/VehicleSelector/VehicleSelector";
+import TabView from "../components/TabView/TabView";
 import Button from "../components/Button/Button";
 
 export default function TestDrive() {
@@ -18,7 +18,7 @@ export default function TestDrive() {
         <main>
             <form action="">
                 <h1>시승 신청</h1>
-                <VehicleSelector title={'시승'}/>
+                <TabView title={'시승'}/>
                 <section>
                     <h2>전시장 선택</h2>
                     <LexusShowroomSelect showRooms={showRooms}/>
