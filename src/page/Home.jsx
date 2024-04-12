@@ -8,11 +8,7 @@ export default function Home() {
     return (
         <div className={'contents'}>
             <CarouselSlide/>
-            <div>
-                {models.map((model, index) => (
-                    <Product model={model} key={index}/>
-                ))}
-            </div>
+            <Product models={models}/>
         </div>
     );
 }

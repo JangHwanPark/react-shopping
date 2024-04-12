@@ -12,7 +12,7 @@ export default function CarouselSlide(props) {
     
     // 슬라이드 버튼 클릭시 해당 인덱스 이미지로 이동
     const handleClick = (index) => {
-        console.log(index, test[index], slideIdx)
+        // console.log(index, test[index], slideIdx)
         setSlideIdx(index);
     }
 
@@ -20,7 +20,7 @@ export default function CarouselSlide(props) {
         <div>
             <div className={styles.carousel_viewport}>
                 <div className={styles.carousel_container}>
-                    {console.log("slideIdx", slideIdx)}
+                    {/*{console.log("slideIdx", slideIdx)}*/}
                     {test.map(({key, label}) => (
                         <div
                             key={key}

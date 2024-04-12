@@ -1,11 +1,15 @@
 import React from 'react';
 import showRooms from '../data/lexus_showrooms_korea.json';
 import months from '../data/month.json';
-import LexusShowroomSelect from "../components/Select/LexusShowroomSelect";
-import UserInputBox from "../components/UserInputBox";
-import useMonthDayPicker from "../hooks/useMonthDayPicker";
-import VehicleSelector from "../components/VehicleSelector/VehicleSelector";
 
+// import Custom Hooks
+import useMonthDayPicker from "../hooks/useMonthDayPicker";
+
+// import Components
+import LexusShowroomSelect from "../components/LexusShowroomSelect/LexusShowroomSelect";
+import Input from "../components/Input/Input";
+import VehicleSelector from "../components/VehicleSelector/VehicleSelector";
+import Button from "../components/Button/Button";
 
 export default function TestDrive() {
     const [month, setMonth, days] = useMonthDayPicker(0);
@@ -22,7 +26,8 @@ export default function TestDrive() {
                 <section>
                     <div>
                         <h2>개인정보 입력</h2>
-                        시승 희망일
+                        {/* select 리팩토링 예정 */}
+                        <label htmlFor="">시승 희망일</label>
                         <select value={String(month)} onChange={(e) => setMonth(Number(e.target.value))}>
                             {months.map(({value, label}) => (
                                 <option key={value} value={value}>{label}</option>
@@ -35,14 +40,12 @@ export default function TestDrive() {
                                 </option>
                             ))}
                         </select>
-                        <label htmlFor="">이름</label>
-                        <UserInputBox type="text" placeholder={"이름을 입력하세요."}/>
-                        <label htmlFor="">전화번호</label>
-                        <UserInputBox type="text" placeholder={"전화번호를 입력하세요."}/>
                     </div>
+                    <Input title={'이름'} type="text" placeholder={"이름을 입력하세요."}/>
+                    <Input title={'전화번호'} type="text" placeholder={"전화번호를 입력하세요."}/>
                 </section>
-                <button>신청하기</button>
-                <button>돌아가기</button>
+                <Button title={'신청하기'}/>
+                <Button title={'돌아가기'}/>
             </form>
         </main>
     );

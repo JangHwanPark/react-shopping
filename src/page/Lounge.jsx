@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Lounge(props) {
+export default function Lounge() {
     return (
         <div></div>
     );

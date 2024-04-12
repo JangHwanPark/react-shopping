@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import {models, service} from '../../data';
+import models from '../../data/models.json';
 import FooterItem from "./FooterItem";
 
 export default function Footer() {
@@ -15,7 +15,6 @@ export default function Footer() {
                     </section>
                     <section className={`${styles.service} ${styles.flex}`}>
                         <FooterItem title={'모델'} items={models}/>
-                        <FooterItem title={'서비스'} items={service}/>
                     </section>
                 </div>
                 <div>
