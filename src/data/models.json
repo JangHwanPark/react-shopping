@@ -7,7 +7,8 @@
     "maxPowerHP": 295,
     "basePrice": 98700000,
     "MPGe": 13.6,
-    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/RX450h_plus_SonicQuartz.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/RX450h_plus_SonicQuartz.png",
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/RX_WhitePear.jpg"
   },
   {
     "name": "ES",
@@ -17,7 +18,8 @@
     "maxPowerHP": 203,
     "basePrice": 66900000,
     "MPGe": 17.2,
-    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/ES300h_Iridium_2.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/ES300h_Iridium_2.png",
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/ES_WhitePear.jpg"
   },
   {
     "name": "NX",
@@ -27,7 +29,8 @@
     "maxPowerHP": 275,
     "basePrice": 76300000,
     "MPGe": 14.0,
-    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/NX450hplus.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/NX450hplus.png",
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/NX_WhitePear.jpg"
   },
   {
     "name": "UX",
@@ -37,7 +40,8 @@
     "maxPowerHP": 181,
     "basePrice": 50900000,
     "MPGe": 16.7,
-    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/UX250h_2WD_blazing_Carnelian_Contrast_Layering.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/UX250h_2WD_blazing_Carnelian_Contrast_Layering.png",
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/UX_WhitePear.jpg"
   },
   {
     "name": "LC",
@@ -47,6 +51,7 @@
     "maxPowerHP": 359,
     "basePrice": 192400000,
     "MPGe": 10.9,
-    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/LC500_pc.png"
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/LC500_pc.png",
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/LC_WhitePear.jpg"
   }
 ]

@@ -14,7 +14,7 @@ export default function TabView({title}) {
         /* 동적 라우팅 사용 예정 */
         <section>
             <h2>{title} 차량 선택</h2>
-            {models.map(({name}, index) => (
+            {models.map(({name, imgWhitePear}, index) => (
                 <ul key={index}>
                     <li onClick={() => selectMenuHandler(index)}>
                         {name}
@@ -24,7 +24,8 @@ export default function TabView({title}) {
 
             {/* 선택한 모델 출력 */}
             <div>
-                Current 모델: {models[currentTab].name || '모델 없음'}
+                <h3>{models[currentTab].name || '모델 없음'}</h3>
+                <img src={models[currentTab].imgWhitePear} alt={models[currentTab].name}/>
             </div>
         </section>
     );

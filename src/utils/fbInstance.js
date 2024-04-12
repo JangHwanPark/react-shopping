@@ -52,9 +52,9 @@ const adminUser = async (user) => {
             // 스냅샷이 존재한다면 snapshot.val 를 이용해 값을 읽어옴
             if (snapshot.exists()) {
                 const admin = snapshot.val();
-                console.log('admins : ', admin);
+                //console.log('admins : ', admin);
                 const isAdmin = admin.includes(user.uid);
-                console.log('isAdmin : ' , isAdmin);
+                //console.log('isAdmin : ' , isAdmin);
                 return {...user, isAdmin };
             }
         })

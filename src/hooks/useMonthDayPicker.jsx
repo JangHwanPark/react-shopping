@@ -29,7 +29,7 @@ function useMonthDayPicker(initialMonth) {
 
             // 일 배열 생성
             const daysArray = Array.from({length: daysInMonth}, (_, i) => i + 1);
-
+            console.log(`year: ${year}, daysInMonth: ${daysInMonth}, daysArray: ${daysArray}`)
             // 새 일 배열로 상태를 업데이트
             setDays(daysArray);
         };
