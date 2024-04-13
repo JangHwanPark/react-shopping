@@ -1,6 +1,5 @@
 // 테스트 스위트 생성
 import {render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import TabView from "./TabView";
 
 describe('TabView', () => {

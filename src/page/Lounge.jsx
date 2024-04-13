@@ -8,7 +8,7 @@ export default function Lounge() {
 
     return (
         <div>
-            <h1>Welcome to the Lounge</h1>
+            <h2>MY LEXUS LOUNGE</h2>
             {name && <p>Hello, {name}!</p>}
         </div>
     );

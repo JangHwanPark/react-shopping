@@ -1,9 +1,15 @@
 import React from 'react';
 import styles from './Header.module.css';
+import models from "../../data/models.json";
+
 import {Link} from "react-router-dom";
-import HeaderItem from "./HeaderItem";
+import {useAuth} from "../../context/AuthContext";
+import {useTab} from "../../context/TabContext";
 
 export default function Header() {
+    const {user} = useAuth();
+    const {currentTab, setCurrentTab} = useTab();
+
     return (
         <header className={styles.header}>
             <div className={styles.inner_wrap}>
@@ -12,9 +18,25 @@ export default function Header() {
                 </Link>
                 <div className={styles.glb_wrap}>
                     <nav className={styles.global_navigation}>
-                        <HeaderItem sliceStart={0} sliceEnd={2}/>
+                        <ul className={styles.item_list}>
+                            <li className={styles.item}>
+                                <Link to={`/models/${models[currentTab].name}`}>MODEL</Link>
+                            </li>
+                            <li className={styles.item}>
+                                <Link to="/test-drive">시승신청</Link>
+                            </li>
+                        </ul>
                     </nav>
-                    <HeaderItem sliceStart={2}/>
+                    <ul className={styles.item_list}>
+                        <li className={styles.item}>
+                            <Link to={user ? `/lounge?=${user.displayName}` : '/login'}>
+                                {user ? `${user.displayName} MY LEXUS LOUNGE` : "MY LEXUS LOUNGE"}
+                            </Link>
+                        </li>
+                        <li className={styles.item}>
+                            <Link to="/login">{user ? "LOGOUT" : "LOGIN"}</Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
