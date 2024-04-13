@@ -1,5 +1,6 @@
 import React from 'react';
 import models from "../../data/models.json";
+import {Link} from "react-router-dom";
 
 export default function TabView({title, currentTab, setCurrentTab}) {
     const selectMenuHandler = (index) => {
@@ -19,7 +20,7 @@ export default function TabView({title, currentTab, setCurrentTab}) {
                 return (
                     <ul key={index}>
                         <li onClick={() => selectMenuHandler(index)}>
-                            {name}
+                            <Link to={`/models/${name}`}>{name}</Link>
                         </li>
                     </ul>
                 )

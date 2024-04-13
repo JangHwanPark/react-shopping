@@ -7,7 +7,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import NotFound from "./page/NotFound";
 import Home from "./page/Home";
 import Models from "./page/Models";
-import ModelsDetail from "./page/ModelsDetail";
+import ModelConfiguration from "./page/ModelConfiguration";
+import ModelsSpec from "./page/ModelsSpec";
 import Lounge from "./page/Lounge";
 import TestDrive from "./page/TestDrive";
 import Authentication from "./page/Authentication";
@@ -19,8 +20,9 @@ const router = createBrowserRouter([
         errorElement: <NotFound/>,
         children: [
             {index:true, element: <Home/>},
-            {path: '/model/:model', element: <Models/>},
-            {path: '/model/:modelId', element: <ModelsDetail/>},
+            {path: '/models/:modelId', element: <Models/>},
+            {path: '/models/:modelId/model-configuration', element: <ModelConfiguration/>},
+            {path: '/models/:modelId/spec', element: <ModelsSpec/>},
             {path: '/test-drive', element: <TestDrive/>},
             {path: '/lounge', element: <Lounge/>},
             {path: '/login', element: <Authentication/>},
