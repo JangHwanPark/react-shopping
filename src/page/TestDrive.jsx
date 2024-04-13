@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import showRooms from '../data/lexus_showrooms_korea.json';
 import months from '../data/month.json';
 
 // import Custom Hooks
 import useMonthDayPicker from "../hooks/useMonthDayPicker";
+import {useTab} from "../context/TabContext";
 
 // import Components
 import LexusShowroomSelect from "../components/LexusShowroomSelect/LexusShowroomSelect";
@@ -12,13 +13,16 @@ import TabView from "../components/TabView/TabView";
 import Button from "../components/Button/Button";
 
 export default function TestDrive() {
+    const {currentTab, setCurrentTab} = useTab();
+    console.log(currentTab)
     const [month, setMonth, days] = useMonthDayPicker(0);
 
+    // Todo: 클릭시 쿼리스트링으로 모델 네임을 전달? (라우팅 동적으로 수정)
     return (
         <main>
             <form action="">
                 <h1>시승 신청</h1>
-                <TabView title={'시승'}/>
+                <TabView title={'시승'} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
                 <section>
                     <h2>전시장 선택</h2>
                     <LexusShowroomSelect showRooms={showRooms}/>

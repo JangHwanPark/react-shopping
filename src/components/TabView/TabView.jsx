@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import models from "../../data/models.json";
 
 export default function TabView({title, currentTab, setCurrentTab}) {
