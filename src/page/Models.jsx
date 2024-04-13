@@ -10,22 +10,27 @@ import ProductInformation from "../components/ProductsInformation/ProductInforma
 
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
-    console.log(currentTab)
 
     return (
         <main>
             <TabView title={'구매'} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
-            <ProductInformation currentTab={currentTab}/>
-            <Link to={`/model/${models[currentTab].name}/model-configuration`}>내차 만들기</Link> {/*클릭시 ModelDetail Page 로
-             이동예정*/}
-            <Link to={'/test-drive'}>시승신청</Link>
             <section>
-                <div>차량 스펙 간략화</div>
+                <ProductInformation currentTab={currentTab} sliceStart={0} sliceEnd={7}>
+                    {/* 전달받은 value 를 span 태그로 감싸서 출력 */}
+                    {(key, value) => <div>{value}</div>}
+                </ProductInformation>
+                <div>
+                    {/* 클릭시 ModelDetail Page 로이동예정 */}
+                    <Link to={`/model/${models[currentTab].name}/model-configuration`}>내차 만들기</Link>
+                    <Link to={'/test-drive'}>시승신청</Link>
+                </div>
             </section>
-            <ul>
-                <li>차량 내부 디자인 (데이터 추가 예정)</li>
-                <li>차량 외부 디자인 (데이터 추가 예정)</li>
-            </ul>
+            <section>
+                <ProductInformation currentTab={currentTab} sliceStart={9} sliceEnd={12}>
+                    {/* 전달받은 value 를 img src 로 사용 */}
+                    {(key, value) => <img src={value} alt={`${key} 이미지`} />}
+                </ProductInformation>
+            </section>
         </main>
     );
 }
