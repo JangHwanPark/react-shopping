@@ -15,8 +15,8 @@ export default function TabView({title, currentTab, setCurrentTab}) {
         <section>
             <h2>{title} 차량 선택</h2>
             {models.map(({name, imgWhitePear}, index) => {
-                console.log("순회 카운트: ", cnt++, " 결과값: ", models)
-                console.log("현재 선택한 종류: ", currentTab)
+                //console.log("순회 카운트: ", cnt++, " 결과값: ", models)
+                //console.log("현재 선택한 종류: ", currentTab)
                 return (
                     <ul key={index}>
                         <li onClick={() => selectMenuHandler(index)}>

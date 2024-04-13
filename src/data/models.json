@@ -8,7 +8,10 @@
     "basePrice": 98700000,
     "MPGe": 13.6,
     "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/RX450h_plus_SonicQuartz.png",
-    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/RX_WhitePear.jpg"
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/RX_WhitePear.jpg",
+    "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/RX_interior design.jpg",
+    "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/rx_exterior01.jpg",
+    "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/rx_exterior02.jpg"
   },
   {
     "name": "ES",
@@ -19,7 +22,10 @@
     "basePrice": 66900000,
     "MPGe": 17.2,
     "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/ES300h_Iridium_2.png",
-    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/ES_WhitePear.jpg"
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/ES_WhitePear.jpg",
+    "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/ES_interior design.jpg",
+    "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/es_exterior01.jpg",
+    "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/es_exterior02.jpg"
   },
   {
     "name": "NX",
@@ -30,7 +36,10 @@
     "basePrice": 76300000,
     "MPGe": 14.0,
     "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/NX450hplus.png",
-    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/NX_WhitePear.jpg"
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/NX_WhitePear.jpg",
+    "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/NX_interior design.jpg",
+    "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/nx_exterior01.jpg",
+    "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/nx_exterior02.jpg"
   },
   {
     "name": "UX",
@@ -41,7 +50,10 @@
     "basePrice": 50900000,
     "MPGe": 16.7,
     "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/UX250h_2WD_blazing_Carnelian_Contrast_Layering.png",
-    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/UX_WhitePear.jpg"
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/UX_WhitePear.jpg",
+    "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/UX_interior design.jpg",
+    "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/ux_exterior01.jpg",
+    "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/ux_exterior02.jpg"
   },
   {
     "name": "LC",
@@ -52,6 +64,9 @@
     "basePrice": 192400000,
     "MPGe": 10.9,
     "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/LC500_pc.png",
-    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/LC_WhitePear.jpg"
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/LC_WhitePear.jpg",
+    "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/LC_500_interior design.jpg",
+    "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/lc_exterior01.jpg",
+    "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/lc_exterior02.jpg"
   }
 ]
