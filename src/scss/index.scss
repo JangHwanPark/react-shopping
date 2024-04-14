@@ -1,4 +1,9 @@
+// Default
 @use "base";
 @use "variables";
 
+// Components
 @use "src/scss/components/button";
+
+// Layout
+@use "src/scss/layout/flex";

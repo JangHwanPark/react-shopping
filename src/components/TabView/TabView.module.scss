@@ -1,0 +1,24 @@
+@use 'src/scss/variables';
+
+.tabViewContainer {
+  margin: 2rem 2.5rem;
+  padding: 0 2.5rem;
+  border-bottom: 1px solid variables.$main-color;
+}
+
+.tabViewTitle {
+  text-align: center;
+}
+
+.tabList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabItem {
+
+}
+
+.tabLink {
+  font-size: 1.5rem;
+}

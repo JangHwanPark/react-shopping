@@ -1,34 +1,45 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import styles from './Models.module.scss';
 import models from "../data/models.json";
+import {Link} from "react-router-dom";
 import {useTab} from "../context/TabContext";
 
 // import Components
 import TabView from "../components/TabView/TabView";
 import ProductInformation from "../components/ProductsInformation/ProductInformation";
 
-
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
 
     return (
-        <main>
+        <main className={styles.modelsContainer}>
             <TabView title={'구매'} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
-            <section>
+            {/* 선택한 모델 출력 */}
+            <div className={styles.selectedModelDisplay}>
+                {/*<h3>{models[currentTab].name || '모델 없음'}</h3>*/}
+                <img src={models[currentTab].imgWhitePear} alt={models[currentTab].name}/>
+            </div>
+            <section className={`${styles.modelInformation} flex`}>
                 <ProductInformation currentTab={currentTab} sliceStart={0} sliceEnd={7}>
                     {/* 전달받은 value 를 span 태그로 감싸서 출력 */}
                     {(key, value) => <div>{value}</div>}
                 </ProductInformation>
-                <div>
+                <div className={`${styles.btnModelWrapper} flex`}>
                     {/* 클릭시 ModelDetail Page 로이동예정 */}
-                    <Link to={`/model/${models[currentTab].name}/model-configuration`}>내차 만들기</Link>
-                    <Link to={'/test-drive'}>시승신청</Link>
+                    <Link to={`/model/${models[currentTab].name}/model-configuration`}>
+                        내차 만들기
+                    </Link>
+                    <Link to={'/test-drive'}>
+                        시승신청
+                    </Link>
                 </div>
             </section>
-            <section>
+            <section className={styles.modelInformation}>
+                <button>Interior</button>
+                <button>exterior</button>
                 <ProductInformation currentTab={currentTab} sliceStart={9} sliceEnd={12}>
                     {/* 전달받은 value 를 img src 로 사용 */}
-                    {(key, value) => <img src={value} alt={`${key} 이미지`} />}
+                    {(key, value) => <img src={value} alt={`${key} 이미지`} width={'100%'}/>}
                 </ProductInformation>
             </section>
         </main>

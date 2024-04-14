@@ -3,7 +3,7 @@ import models from "../../data/models.json";
 
 export default function ProductInformation({ currentTab, sliceStart, sliceEnd, children }) {
     const model = models[currentTab];
-    console.log(children)
+
     return (
         <div>
             <ul>
