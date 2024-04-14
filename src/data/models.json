@@ -1,5 +1,19 @@
 [
   {
+    "name": "ES",
+    "type": "Sedan",
+    "engineType": "2.5L 4-Cylinder",
+    "fuelType": "Gasoline",
+    "maxPowerHP": 203,
+    "basePrice": 66900000,
+    "MPGe": 17.2,
+    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/ES300h_Iridium_2.png",
+    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/ES_WhitePear.jpg",
+    "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/ES_interior-design.jpg",
+    "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/es_exterior01.jpg",
+    "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/es_exterior02.jpg"
+  },
+  {
     "name": "RX",
     "type": "SUV",
     "engineType": "3.5L V6",
@@ -12,20 +26,6 @@
     "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/RX_interior design.jpg",
     "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/rx_exterior01.jpg",
     "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/rx_exterior02.jpg"
-  },
-  {
-    "name": "ES",
-    "type": "Sedan",
-    "engineType": "2.5L 4-Cylinder",
-    "fuelType": "Gasoline",
-    "maxPowerHP": 203,
-    "basePrice": 66900000,
-    "MPGe": 17.2,
-    "img": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/ES300h_Iridium_2.png",
-    "imgWhitePear": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/white-pear/ES_WhitePear.jpg",
-    "interiorDesign": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/interior-design/ES_interior design.jpg",
-    "exteriorDesign01": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/es_exterior01.jpg",
-    "exteriorDesign02": "https://janghwanpark.github.io/data-storage/image-data/img-lexus/exterior-design/es_exterior02.jpg"
   },
   {
     "name": "NX",

@@ -16,8 +16,8 @@ export default function ProductsCard({models}) {
                             <p><strong>{basePrice}원 ~</strong></p>
                         </div>
                         <div className={styles.productActions}>
-                            <Link to={'/'}>상세보기</Link>
-                            <Link to={'/test-drive'}>시승신청</Link>
+                            <Link className={'btn-primary'} to={'/'}>상세보기</Link>
+                            <Link className={'btn-primary'} to={'/test-drive'}>시승신청</Link>
                         </div>
                     </div>
                 </article>
