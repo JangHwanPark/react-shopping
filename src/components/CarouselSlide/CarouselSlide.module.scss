@@ -21,7 +21,7 @@
 }
 
 .carouselViewport {
-    width: 100vw; /* 뷰포트 전체 너비 사용 */
+    width: 100%; /* 뷰포트 전체 너비 사용 */
     overflow: hidden; /* 슬라이드 외부 내용 숨김 */
 }
 

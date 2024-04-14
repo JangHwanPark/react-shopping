@@ -1,7 +1,7 @@
-// 테스트 스위트 생성
 import {render, screen } from "@testing-library/react";
 import TabView from "./TabView";
 
+// 테스트 스위트 생성
 describe('TabView', () => {
     // "구매" 타이틀에 대한 테스트 케이스
     it('renders purchase model title', () => {

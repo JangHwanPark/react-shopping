@@ -2,13 +2,13 @@ import React from 'react';
 import models from '../data/models.json';
 
 import CarouselSlide from "../components/CarouselSlide/CarouselSlide";
-import Product from "../components/Products/Product";
+import ProductsCard from "../components/ProductsCard/ProductsCard";
 
 export default function Home() {
     return (
         <div className={'contents'}>
             <CarouselSlide/>
-            <Product models={models}/>
+            <ProductsCard models={models}/>
         </div>
     );
 }
