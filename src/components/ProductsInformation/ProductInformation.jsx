@@ -1,12 +1,14 @@
 import React from 'react';
+import styles from './ProductInformation.module.scss';
 import models from "../../data/models.json";
 
-export default function ProductInformation({ currentTab, sliceStart, sliceEnd, children }) {
+export default function ProductInformation({ className, currentTab, sliceStart, sliceEnd, children }) {
     const model = models[currentTab];
 
     return (
-        <div>
-            <ul>
+        <div className={`${styles.modelInfoWrapper} ${className}`}>
+            {/* Todo: 리스트 앞 뒤로 추가 텍스트 삽입 */}
+            <ul className={`${styles.modelInfoList} ${className}`}>
                 {/* 객체를 배열로 변환하여 순회하며 요소 출력 */}
                 {/* 슬라이스를 사용하여 이미지를 제외한 정보만 출력 */}
                 {Object.entries(model).slice(sliceStart, sliceEnd).map(([key, value]) => (

@@ -19,17 +19,22 @@ export default function Models() {
                 {/*<h3>{models[currentTab].name || '모델 없음'}</h3>*/}
                 <img src={models[currentTab].imgWhitePear} alt={models[currentTab].name}/>
             </div>
-            <section className={`${styles.modelInformation} flex`}>
-                <ProductInformation currentTab={currentTab} sliceStart={0} sliceEnd={7}>
+            <section className={styles.modelInformation}>
+                <ProductInformation
+                    className={'flex'}
+                    currentTab={currentTab}
+                    sliceStart={0}
+                    sliceEnd={7}
+                >
                     {/* 전달받은 value 를 span 태그로 감싸서 출력 */}
-                    {(key, value) => <div>{value}</div>}
+                    {(key, value) => <p><strong>{value}</strong></p>}
                 </ProductInformation>
                 <div className={`${styles.btnModelWrapper} flex`}>
                     {/* 클릭시 ModelDetail Page 로이동예정 */}
-                    <Link to={`/model/${models[currentTab].name}/model-configuration`}>
+                    <Link to={`/model/${models[currentTab].name}/model-configuration`} className={'btn-primary'}>
                         내차 만들기
                     </Link>
-                    <Link to={'/test-drive'}>
+                    <Link to={'/test-drive'} className={'btn-primary'}>
                         시승신청
                     </Link>
                 </div>
@@ -37,7 +42,11 @@ export default function Models() {
             <section className={styles.modelInformation}>
                 <button>Interior</button>
                 <button>exterior</button>
-                <ProductInformation currentTab={currentTab} sliceStart={9} sliceEnd={12}>
+                <ProductInformation
+                    currentTab={currentTab}
+                    sliceStart={9}
+                    sliceEnd={12}
+                >
                     {/* 전달받은 value 를 img src 로 사용 */}
                     {(key, value) => <img src={value} alt={`${key} 이미지`} width={'100%'}/>}
                 </ProductInformation>

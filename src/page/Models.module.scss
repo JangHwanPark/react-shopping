@@ -3,10 +3,16 @@
   margin-top: 5rem;
 }
 
+.modelInformation:first-child {
+  padding: 2rem 5rem;
+}
+
 .selectedModelDisplay {
   text-align: center;
 }
 
 .btnModelWrapper {
-  flex-direction: column;
+  margin: 3rem 0;
+  justify-content: center;
+  gap: 30px;
 }
