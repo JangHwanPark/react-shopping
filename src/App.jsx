@@ -6,12 +6,12 @@ import {TabProvider} from "./context/TabContext";
 function App() {
     return (
         <AuthProvider>
-            <div className="container">
+            {/*<div className="container">*/}
                 <TabProvider>
                     <Header/>
                     <Outlet/>
                 </TabProvider>
-            </div>
+            {/*</div>*/}
         </AuthProvider>
     );
 }

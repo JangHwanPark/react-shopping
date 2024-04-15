@@ -6,9 +6,9 @@ import ProductsCard from "../components/ProductsCard/ProductsCard";
 
 export default function Home() {
     return (
-        <div className={'contents'}>
+        <main className={'contents'}>
             <CarouselSlide/>
             <ProductsCard models={models}/>
-        </div>
+        </main>
     );
 }

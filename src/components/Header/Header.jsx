@@ -29,8 +29,8 @@ export default function Header() {
                     </nav>
                     <ul className={styles.item_list}>
                         <li className={styles.item}>
-                            <Link to={user ? `/lounge?=${user.displayName}` : '/login'}>
-                                {user ? `${user.displayName} MY LEXUS LOUNGE` : "MY LEXUS LOUNGE"}
+                            <Link to={user ? `/lexus-lounge` : '/login'}>
+                                {user ? `${user.displayName} LEXUS LOUNGE` : "MY LEXUS LOUNGE"}
                             </Link>
                         </li>
                         <li className={styles.item}>
