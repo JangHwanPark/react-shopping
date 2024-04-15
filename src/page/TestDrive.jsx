@@ -51,8 +51,20 @@ export default function TestDrive() {
                             options={days.map(day => ({ value: day, label: day }))}
                         />
                     </div>
-                    <Input title={'이름'} type="text" placeholder={"이름을 입력하세요."}/>
-                    <Input title={'전화번호'} type="text" placeholder={"전화번호를 입력하세요."}/>
+                    <Input
+                        id={'name_input'}
+                        className={'primary_input'}
+                        title={'이름'}
+                        type="text"
+                        placeholder={"이름을 입력하세요."}
+                    />
+                    <Input
+                        id={'phone_input'}
+                        className={'primary_input'}
+                        title={'전화번호'}
+                        type="text"
+                        placeholder={"전화번호를 입력하세요."}
+                    />
                 </section>
                 <Button className={'btn-primary'} title={'신청하기'}/>
                 <Button className={'btn-primary'} title={'돌아가기'}/>

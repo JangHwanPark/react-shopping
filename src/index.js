@@ -24,7 +24,7 @@ const router = createBrowserRouter([
             {path: '/models/:modelId/model-configuration', element: <ModelConfiguration/>},
             {path: '/models/:modelId/spec', element: <ModelsSpec/>},
             {path: '/test-drive', element: <TestDrive/>},
-            {path: '/lounge', element: <Lounge/>},
+            {path: '/lexus-lounge', element: <Lounge/>},
             {path: '/login', element: <Authentication/>},
         ]
     }
