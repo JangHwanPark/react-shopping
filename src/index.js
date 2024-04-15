@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         children: [
             {index:true, element: <Home/>},
             {path: '/models/:modelId', element: <Models/>},
-            {path: '/models/:modelId/model-configuration', element: <ModelConfiguration/>},
-            {path: '/models/:modelId/spec', element: <ModelsSpec/>},
+            {path: '/model/:modelId/model-configuration', element: <ModelConfiguration/>},
+            {path: '/model/:modelId/spec', element: <ModelsSpec/>},
             {path: '/test-drive', element: <TestDrive/>},
             {path: '/lexus-lounge', element: <Lounge/>},
             {path: '/login', element: <Authentication/>},

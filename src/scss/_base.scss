@@ -11,14 +11,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// root & container
 #root {
   width: 100%;
   height: 100%;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
 }
 
 .container {
@@ -28,6 +24,21 @@ code {
 
 .contents {
   width: 100%;
+}
+
+// main
+.inner_wrap {
+  margin: 0 7rem 0 7rem;
+}
+
+.cont_center {
+  margin: 0 auto;
+}
+
+// default
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
 }
 
 ul {

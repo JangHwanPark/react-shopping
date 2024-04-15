@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './TabView.module.scss';
 import models from "../../data/models.json";
 import {Link} from "react-router-dom";
 
@@ -11,12 +10,14 @@ export default function TabView({title, currentTab, setCurrentTab}) {
     }
 
     return (
-        <section className={styles.tabViewContainer}>
-            <h2 className={styles.tabViewTitle}>{title} 차량 선택</h2>
-            <ul className={styles.tabList}>
+        <section className={'tabview_container'}>
+            <h1 className={'tabview_title'}>
+                <span>{title} 차량 선택</span>
+            </h1>
+            <ul className={'tabview_list'}>
                 {models.map(({name}, index) => (
-                    <li className={styles.tabItem} key={index} onClick={() => selectMenuHandler(index)}>
-                        <Link className={styles.tabLink} to={`/models/${name}`}>
+                    <li className={'tabview_item'} key={index} onClick={() => selectMenuHandler(index)}>
+                        <Link className={'tabview_link'} to={`/models/${name}`}>
                             <p><strong>{name}</strong></p>
                         </Link>
                     </li>

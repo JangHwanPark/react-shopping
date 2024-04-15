@@ -1,3 +1,38 @@
 .test_drive {
+  width: 100%;
+}
 
+.contents_wrap {
+  width: 768px;
+}
+
+.cont_main {
+  width: 100%;
+}
+
+.cont-title {
+  margin-top: 0;
+  padding-top: 2.5rem;
+  line-height: 67px;
+  font-size: 32px;
+
+  &::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #000;
+  }
+}
+
+.showroom_section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.personal_info_section {
+  margin-top: 2.5rem;
+}
+
+.btn-wrap {
+  width: 290px;
+  margin: 0 auto;
 }

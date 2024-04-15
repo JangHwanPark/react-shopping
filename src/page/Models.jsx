@@ -7,18 +7,15 @@ import {useTab} from "../context/TabContext";
 // import Components
 import TabView from "../components/TabView/TabView";
 import ProductInformation from "../components/ProductsInformation/ProductInformation";
-import Title from "../components/Title/Title";
 
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
 
     return (
         <main className={styles.modelsContainer}>
-            <Title title={'모델 선택'}/>
             <TabView title={'구매'} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
             {/* 선택한 모델 출력 */}
             <div className={styles.selectedModelDisplay}>
-                {/*<h3>{models[currentTab].name || '모델 없음'}</h3>*/}
                 <img src={models[currentTab].imgWhitePear} alt={models[currentTab].name}/>
             </div>
             <section className={styles.modelInformation}>
