@@ -7,7 +7,6 @@ import useMonthDayPicker from "../hooks/useMonthDayPicker";
 import {useTab} from "../context/TabContext";
 
 // import Components
-import LexusShowroomSelect from "../components/LexusShowroomSelect/LexusShowroomSelect";
 import Input from "../components/Input/Input";
 import TabView from "../components/TabView/TabView";
 import Button from "../components/Button/Button";
@@ -38,13 +37,13 @@ export default function TestDrive() {
                 <section className={'showroom_section'}>
                     <h2>전시장 선택</h2>
                     <Select
+                        id="test_drive_show_rooms"
+                        className="select_show_rooms"
                         value={selectedShowroom}
                         onChange={(e) => setSelectedShowroom(e.target.value)}
                         options={showRooms.map(({ name, address }) => (
                             { value: address, label: name }
                         ))}
-                        id="showRooms"
-                        className="mshowRooms"
                     />
                 </section>
                 <section className={'personal_info_section'}>
@@ -53,13 +52,15 @@ export default function TestDrive() {
                         {/* select 리팩토링 예정 */}
                         <label htmlFor="test_drive_month">시승 희망일</label>
                         <Select
+                            id="test_drive_month"
+                            className="select_month"
                             value={String(month)}
                             onChange={(e) => setMonth(Number(e.target.value))}
                             options={months.map(({ value, label }) => ({ value, label }))}
-                            id="test_drive_month"
-                            className="month_select"
                         />
                         <Select
+                            id="test_drive_day"
+                            className="select_day"
                             value={selectedDay}
                             onChange={(e) => setSelectedDay(e.target.value)}
                             options={days.map(day => ({ value: day, label: day }))}
