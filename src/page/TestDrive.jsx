@@ -16,10 +16,16 @@ import Select from "../components/Select/Select";
 
 export default function TestDrive() {
     const {currentTab, setCurrentTab} = useTab();
+    
+    // 현재 연도와 선택한 월에따라 일을 계산하여 월, 일을 반환하는 커스텀 훅
     const [month, setMonth, days] = useMonthDayPicker(0);
-    const [selectedDay, setSelectedDay] = useState();
 
-    // Todo: 클릭시 쿼리스트링으로 모델 네임을 전달? (라우팅 동적으로 수정)
+    // 선택된 일(day)을 상태로 관리
+    const [selectedDay, setSelectedDay] = useState();
+    
+    // 선택된 쇼룸의 이름을 상태로 관리
+    const [selectedShowroom, setSelectedShowroom] = useState('');
+
     return (
         <main className={'test_drive'}>
             <form action="" className={'test_drive_form'}>
@@ -31,7 +37,15 @@ export default function TestDrive() {
                 />
                 <section className={'showroom_section'}>
                     <h2>전시장 선택</h2>
-                    <LexusShowroomSelect showRooms={showRooms}/>
+                    <Select
+                        value={selectedShowroom}
+                        onChange={(e) => setSelectedShowroom(e.target.value)}
+                        options={showRooms.map(({ name, address }) => (
+                            { value: address, label: name }
+                        ))}
+                        id="showRooms"
+                        className="mshowRooms"
+                    />
                 </section>
                 <section className={'personal_info_section'}>
                     <div className={'date_picker'}>
