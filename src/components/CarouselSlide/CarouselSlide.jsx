@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import styles from './CarouselSlide.module.css';
 import carouselImg from '../../data/carousel_img.json';
+import CarouselButton from "../Button/CarouselButton";
 
 export default function CarouselSlide() {
     const [slideIdx, setSlideIdx] = useState(0);
@@ -13,13 +13,13 @@ export default function CarouselSlide() {
     }
 
     return (
-        <div className={styles.carousel}>
-            <div className={styles.carouselViewport}>
-                <div className={styles.carouselTrack}>
+        <div className={'carousel'}>
+            <div className={'carousel_viewport'}>
+                <div className={'carousel_track'}>
                     {carouselImg.map(({titleImg}, index) => (
                         <figure
                             key={index}
-                            className={styles.slideElement}
+                            className={'slide_element'}
                             style={{transform: `translateX(-${slideIdx * 100}%)`}}
                         >
                             <img src={titleImg} alt={`타이틀 이미지 ${index + 1}`}/>
@@ -27,15 +27,14 @@ export default function CarouselSlide() {
                     ))}
                 </div>
             </div>
-            <nav className={styles.carouselNavigation}>
+            <nav className={'carousel_navigation'}>
                 {carouselImg.map((_, index) => (
-                    <button
+                    <CarouselButton
                         key={index}
-                        className={styles.carouselButton}
+                        className={'carousel_button'}
                         onClick={() => handleClick(index)}
-                    >
-                        {index + 1}
-                    </button>
+                        label={index + 1}
+                    />
                 ))}
             </nav>
         </div>

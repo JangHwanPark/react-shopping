@@ -1,0 +1,54 @@
+.carousel {
+  max-width: 100%; /* 캐러셀이 화면 너비를 넘지 않도록 설정 */
+  height: 1000px;
+  margin: auto; /* 중앙 정렬 */
+  position: relative; /* 자식 요소 범위는 이 클래스 내부로 한정 */
+}
+
+.carousel_viewport {
+  width: 100%; /* 뷰포트 전체 너비 사용 */
+  overflow: hidden; /* 슬라이드 외부 내용 숨김 */
+}
+
+.carousel_track {
+  display: flex;
+  transition: transform 0.5s ease; /* 부드러운 전환 효과 */
+}
+
+.slide_element {
+  flex: 0 0 100%; /* 각 슬라이드는 뷰포트 너비와 동일하게 설정 */
+  overflow: hidden; /* 이미지가 div 크기를 넘지 않도록 설정 */
+}
+
+.carousel_viewport, .carousel_track, .slide_element {
+  height: 100%;
+}
+
+.carousel_navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.carousel_button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel_button:hover,
+.carousel_button:focus {
+  background-color: #ccc;
+}
+
+.carousel_button.active {
+  background-color: #666;
+  color: #fff;
+}
