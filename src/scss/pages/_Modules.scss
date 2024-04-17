@@ -1,6 +1,11 @@
 .models_container {
-  width: 100%;
+  // width: 100%;
   margin-top: 5rem;
+  padding: 3rem;
+}
+
+.model_information {
+  width: 100%;
 }
 
 .model_information:first-child {
@@ -11,8 +16,13 @@
   text-align: center;
 }
 
-.btn_model_wrap {
+.link_wrap {
   margin: 3rem 0;
   justify-content: center;
   gap: 30px;
+}
+
+// Bottom Section
+.model_design {
+  gap: 2rem;
 }

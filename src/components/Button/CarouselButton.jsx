@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function CarouselButton({key, className, onClick, label}) {
+export default function CarouselButton({index, className, onClick, label}) {
     return (
-        <button key={key} className={className} onClick={onClick}>
+        <button key={index} className={className} onClick={onClick}>
             {label}
         </button>
     );

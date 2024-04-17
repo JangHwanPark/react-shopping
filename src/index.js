@@ -4,14 +4,14 @@ import './scss/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import NotFound from "./page/NotFound";
-import Home from "./page/Home";
-import Models from "./page/Models";
-import ModelConfiguration from "./page/ModelConfiguration";
-import ModelsSpec from "./page/ModelsSpec";
-import Lounge from "./page/Lounge";
-import TestDrive from "./page/TestDrive";
-import Authentication from "./page/Authentication";
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import Models from "./pages/Models";
+import ModelConfiguration from "./pages/ModelConfiguration";
+import ModelsSpec from "./pages/ModelsSpec";
+import Lounge from "./pages/Lounge";
+import TestDrive from "./pages/TestDrive";
+import Authentication from "./pages/Authentication";
 
 const router = createBrowserRouter([
     {

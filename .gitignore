@@ -27,9 +27,9 @@ yarn-error.log*
 /src/scss/index.css
 /src/scss/index.css.map
 /src/scss/.sass-cache/3a70ccac8c61fb065c0bd97a329bd8cf496c7da7/index.scssc
-/src/page/Models.module.css
-/src/page/Models.module.css.map
-/src/page/.sass-cache/dcc6e767f00f4afbe405bcbd4ff47684254e9d75/Models.module.scssc
+/src/pages/Models.module.css
+/src/pages/Models.module.css.map
+/src/pages/.sass-cache/dcc6e767f00f4afbe405bcbd4ff47684254e9d75/Models.module.scssc
 /.idea/modules.xml
 /src/components/ProductsInformation/ProductInformation.module.css
 /src/components/ProductsInformation/ProductInformation.module.css.map
