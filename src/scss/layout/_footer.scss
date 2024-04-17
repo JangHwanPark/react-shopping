@@ -1,0 +1,20 @@
+@use "src/scss/variables";
+
+.footer {
+  width: 100%;
+  padding: 20px 50px;
+  background-color: #333;
+  color: variables.$sub-color;
+}
+
+.inner_footer {
+  padding: 0 3rem;
+}
+
+.section_service {
+  line-height: 2rem;
+}
+
+.section_relation {
+
+}
