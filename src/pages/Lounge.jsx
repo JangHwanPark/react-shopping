@@ -1,16 +1,13 @@
 import React from 'react';
+import Title from "../components/Title/Title";
 
 export default function Lounge() {
     return (
         <main>
-            <h2>
-                <span>LEXUS</span>
-                <span>LOUNGE</span>
-            </h2>
+            <Title titleText={'LEXUS LOUNGE'}/>
             <p>
                 LEXUS LOUNGE는 렉서스 고객만을 위한
                 프리미엄 멤버십 서비스입니다.
-
                 애플리케이션과 웹사이트를 통해 렉서스 고객만을 위한
                 차량 유지와 관리에 필요한 정보를 확인하고
                 몇 번의 터치만으로 내게 필요한 서비스를 경험해 보세요.

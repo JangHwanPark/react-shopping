@@ -6,22 +6,6 @@
   border-bottom: 1px solid variables.$main-color;
 }
 
-.tabview_title {
-  padding: 3rem 0 2rem 0;
-  text-align: center;
-
-  &:after {
-    width: 1px;
-    margin-top: 30px;
-    height: 120px;
-    content: ''; // 가상요소에 content 속성 필수 ('' 안에 적은거 요소로 출력됨)
-    display: block;
-    position: relative;
-    left: 50%;
-    background: variables.$main-color;
-  }
-}
-
 .tabview_list {
   display: flex;
   justify-content: space-between;

@@ -20,7 +20,7 @@ export default function Models() {
                 currentTab={currentTab}
                 setCurrentTab={setCurrentTab}
             />
-            {/* Todo: Dom 조정 및 가로스타일 적용 */}
+
             {/* Middle Section */}
             <div className={'flex-center'}>
                 <section className={'model_info'}>

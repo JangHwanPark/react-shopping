@@ -5,6 +5,7 @@
 @use "src/scss/components/input";
 @use "src/scss/components/select";
 @use "src/scss/components/TabView";
+@use "src/scss/components/title";
 @use "src/scss/layout/flex";
 @use "src/scss/layout/header";
 @use "src/scss/layout/footer";

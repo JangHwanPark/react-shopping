@@ -1,6 +1,7 @@
 import React from 'react';
 import models from "../../data/models.json";
 import {Link} from "react-router-dom";
+import Title from "../Title/Title";
 
 export default function TabView({title, currentTab, setCurrentTab}) {
     const selectMenuHandler = (index) => {
@@ -11,9 +12,7 @@ export default function TabView({title, currentTab, setCurrentTab}) {
 
     return (
         <section className={'tabview_container'}>
-            <h1 className={'tabview_title'}>
-                <span>{title} 차량 선택</span>
-            </h1>
+            <Title titleText={`${title} 차량 선택`}/>
             <ul className={'tabview_list'}>
                 {models.map(({name}, index) => (
                     <li className={'tabview_item'} key={index} onClick={() => selectMenuHandler(index)}>
