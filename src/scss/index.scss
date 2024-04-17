@@ -6,7 +6,6 @@
 @use "src/scss/components/button";
 @use "src/scss/components/CarouselSlide";
 @use "src/scss/components/input";
-@use "src/scss/components/ProductInformation";
 @use "src/scss/components/select";
 @use "src/scss/components/TabView";
 
@@ -15,5 +14,5 @@
 @use "src/scss/layout/header";
 
 // Page
-@use "src/scss/pages/Modules";
+@use "pages/Models";
 @use "src/scss/pages/TestDrive";

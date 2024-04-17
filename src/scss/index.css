@@ -3,12 +3,11 @@
 @use "src/scss/components/button";
 @use "src/scss/components/CarouselSlide";
 @use "src/scss/components/input";
-@use "src/scss/components/ProductInformation";
 @use "src/scss/components/select";
 @use "src/scss/components/TabView";
 @use "src/scss/layout/flex";
 @use "src/scss/layout/header";
-@use "src/scss/pages/Modules";
+@use "pages/Models";
 @use "src/scss/pages/TestDrive";
 
 /*# sourceMappingURL=index.css.map */

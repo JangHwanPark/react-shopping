@@ -26,20 +26,26 @@ export default function Models() {
                 <section className={'model_info'}>
                     {/* 이미지 컴포넌트: 선택한 모델 출력 */}
                     <ImageBlock
-                        className={'selected_model_display'}
+                        className={'selected_model_img'}
                         src={models[currentTab].imgWhitePear}
                         alt={models[currentTab].name}
                     />
                     {/* Model info */}
                     <ProductInformation
                         className={'info_wrapper flex-center'}
-                        ulClassName={'flex-column'}
+                        ulClassName={'info_list flex'}
+                        liClassName={'info_item flex-column'}
                         currentTab={currentTab}
-                        sliceStart={0}
+                        sliceStart={1}
                         sliceEnd={7}
                     >
                         {/* 전달받은 value 를 span 태그로 감싸서 출력 */}
-                        {(key, value) => <p><strong>{value}</strong></p>}
+                        {(key, value) => (
+                            <>
+                                <span>{key}</span>
+                                <span><strong>{value}</strong></span>
+                            </>
+                        )}
                     </ProductInformation>
                     {/* Link button */}
                     <div className={`link_wrap flex`}>

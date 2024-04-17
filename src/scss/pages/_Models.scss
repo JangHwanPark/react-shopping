@@ -1,0 +1,47 @@
+@use "src/scss/variables";
+
+.models_container {
+  // width: 100%;
+  margin-top: 5rem;
+  padding: 3rem;
+}
+
+// image
+.selected_model_img {
+  text-align: center;
+}
+
+// model info
+.info_list {
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid variables.$main-color;
+  border-bottom: 1px solid variables.$main-color;
+}
+
+.info_item {
+  width: 180px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-right:  1px solid variables.$neutral-color;
+
+  span {
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+  }
+}
+
+// Link Button
+.link_wrap {
+  margin: 3rem 0;
+  justify-content: center;
+  gap: 30px;
+}
+
+// Bottom Section
+.model_design {
+  gap: 2rem;
+}
