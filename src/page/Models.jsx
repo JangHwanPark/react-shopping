@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Models.module.scss';
 import models from "../data/models.json";
 import {Link} from "react-router-dom";
 import {useTab} from "../context/TabContext";
@@ -12,13 +11,13 @@ export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
 
     return (
-        <main className={styles.modelsContainer}>
+        <main className={'models_container'}>
             <TabView title={'구매'} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
             {/* 선택한 모델 출력 */}
-            <div className={styles.selectedModelDisplay}>
+            <div className={'selected_model_display'}>
                 <img src={models[currentTab].imgWhitePear} alt={models[currentTab].name}/>
             </div>
-            <section className={styles.modelInformation}>
+            <section className={'model_information'}>
                 <ProductInformation
                     className={'flex'}
                     currentTab={currentTab}
@@ -28,7 +27,7 @@ export default function Models() {
                     {/* 전달받은 value 를 span 태그로 감싸서 출력 */}
                     {(key, value) => <p><strong>{value}</strong></p>}
                 </ProductInformation>
-                <div className={`${styles.btnModelWrapper} flex`}>
+                <div className={`btn_model_wrap flex`}>
                     {/* 클릭시 ModelDetail Page 로이동예정 */}
                     <Link to={`/model/${models[currentTab].name}/model-configuration`} className={'btn-primary'}>
                         내차 만들기
@@ -38,7 +37,7 @@ export default function Models() {
                     </Link>
                 </div>
             </section>
-            <section className={styles.modelInformation}>
+            <section className={'model_information'}>
                 <button>Interior</button>
                 <button>exterior</button>
                 <ProductInformation

@@ -12,6 +12,8 @@
 
 // Layout
 @use "src/scss/layout/flex";
+@use "src/scss/layout/header";
 
 // Page
+@use "src/scss/pages/Modules";
 @use "src/scss/pages/TestDrive";
