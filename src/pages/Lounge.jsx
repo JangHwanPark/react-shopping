@@ -11,18 +11,18 @@ export default function Lounge() {
                         <figure>
                             <img src={'img/lounge-01.jpg'} alt={'img'}/>
                         </figure>
-                        <div>
+                        <div className={'text_wrap'}>
                             <p>
-                                LEXUS LOUNGE는 렉서스 고객만을 위한
+                                LEXUS LOUNGE는 렉서스 고객만을 위한<br/>
                                 프리미엄 멤버십 서비스입니다.
                             </p>
                             <p>
-                                애플리케이션과 웹사이트를 통해 렉서스 고객만을 위한
-                                차량 유지와 관리에 필요한 정보를 확인하고
+                                애플리케이션과 웹사이트를 통해 렉서스 고객만을 위한<br/>
+                                차량 유지와 관리에 필요한 정보를 확인하고<br/>
                                 몇 번의 터치만으로 내게 필요한 서비스를 경험해 보세요.
                             </p>
                             <p>
-                                라이프스타일을 중요시하는 당신에게 어울리는 프리미엄 혜택 또한
+                                라이프스타일을 중요시하는 당신에게 어울리는 프리미엄 혜택 또한<br/>
                                 LEXUS LOUNGE에 준비되어 있습니다.
                             </p>
                         </div>

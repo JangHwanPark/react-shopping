@@ -5,14 +5,27 @@
 }
 
 // Notice
+.section_lounge {
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .text_wrap {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: variables.$sub-color;
+  }
+}
+
 .section_notice {
+  margin: 5rem 0;
   border: 1px solid variables.$main-color;
 }
 
 .notice_wrap {
   padding: 3rem 5rem;
-}
-
-.section_lounge {
-  width: 100%;
 }
