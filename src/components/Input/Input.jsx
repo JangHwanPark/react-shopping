@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Input({title, type, placeholder}) {
+export default function Input({ id, className, divClassName, title, type, placeholder}) {
     return (
-        <div>
-            <label htmlFor="">{title}</label>
-            <input type={type} placeholder={placeholder}/>
+        <div className={divClassName}>
+            <label htmlFor={id}>{title}</label>
+            <input id={id} className={className} type={type} placeholder={placeholder}/>
         </div>
     );
 }

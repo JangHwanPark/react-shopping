@@ -1,6 +1,7 @@
 import React from 'react';
 import models from "../../data/models.json";
 import {Link} from "react-router-dom";
+import Title from "../Title/Title";
 
 export default function TabView({title, currentTab, setCurrentTab}) {
     const selectMenuHandler = (index) => {
@@ -9,28 +10,18 @@ export default function TabView({title, currentTab, setCurrentTab}) {
         setCurrentTab(index)
     }
 
-    let cnt = 0;
     return (
-        /* 동적 라우팅 사용 예정 */
-        <section>
-            <h2>{title} 차량 선택</h2>
-            {models.map(({name, imgWhitePear}, index) => {
-                //console.log("순회 카운트: ", cnt++, " 결과값: ", models)
-                //console.log("현재 선택한 종류: ", currentTab)
-                return (
-                    <ul key={index}>
-                        <li onClick={() => selectMenuHandler(index)}>
-                            <Link to={`/models/${name}`}>{name}</Link>
-                        </li>
-                    </ul>
-                )
-            })}
-
-            {/* 선택한 모델 출력 */}
-            <div>
-                <h3>{models[currentTab].name || '모델 없음'}</h3>
-                <img src={models[currentTab].imgWhitePear} alt={models[currentTab].name}/>
-            </div>
+        <section className={'tabview_container'}>
+            <Title titleText={`${title} 차량 선택`}/>
+            <ul className={'tabview_list'}>
+                {models.map(({name}, index) => (
+                    <li className={'tabview_item'} key={index} onClick={() => selectMenuHandler(index)}>
+                        <Link className={'tabview_link'} to={`/models/${name}`}>
+                            <p><strong>{name}</strong></p>
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </section>
     );
 }

@@ -1,0 +1,27 @@
+@use 'src/scss/variables';
+
+.primary_input {
+  width: 100%;
+  padding: 10px 20px;
+  background: variables.$sub-color;
+  border: 1px solid variables.$main-color;
+  font-size: 16px;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #aaa;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #b0b0b0;
+    box-shadow: 0 0 8px rgba(176, 176, 176, 0.5);
+  }
+
+  &::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+
+  transition: border-color 0.3s, box-shadow 0.3s;
+}

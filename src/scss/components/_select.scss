@@ -1,0 +1,38 @@
+// 공통 스타일 설정
+%select-style {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 4 5"><polygon fill="%23007AFF" points="2,0 0,2 4,2" /></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 3px rgba(0, 122, 255, 0.5);
+  }
+
+  &:hover {
+    border-color: #aaa;
+  }
+}
+
+.select_show_rooms {
+  @extend %select-style;
+}
+
+.select_month {
+  @extend %select-style;
+}
+
+.select_day {
+  @extend %select-style;
+}

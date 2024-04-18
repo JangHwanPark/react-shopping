@@ -1,0 +1,98 @@
+/* Flexbox Utilities */
+
+/* 기본 flex 설정 */
+.flex {
+  display: flex;
+}
+
+/* 가운데 정렬 (가로, 세로) */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 컬럼 방향 */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 스페이스-비트윈: 자식 요소 사이에 균등 간격 */
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 스페이스-어라운드: 자식 요소 주위에 균등 간격 */
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 스페이스-이븐리: 자식 요소 사이의 간격을 균등하게 분배 */
+.flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* 시작점 정렬 */
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* 종료점 정렬 */
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 세로축 기준 가운데 정렬 */
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+/* 세로축 기준 시작점 정렬 */
+.align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 세로축 기준 종료점 정렬 */
+.align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* 자식 요소를 래핑 (줄바꿈) */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 자식 요소를 래핑 방지 (줄바꿈 없음) */
+.flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* 역방향 정렬 */
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* 역방향 컬럼 정렬 */
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* 가로축과 세로축 둘 다 중앙 정렬 */
+.flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
