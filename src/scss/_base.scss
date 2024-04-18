@@ -41,17 +41,28 @@ code {
   monospace;
 }
 
+// list
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+dl {
+  display: block;
+}
+dt, dd {
+  display: inline-block;
+  margin-right: 10px; /* 오른쪽 여백 조정 */
+}
+
+//
 a {
   color: #333;
   text-decoration: none;
 }
 
+//
 figure {
   margin: 0;
 }

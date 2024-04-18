@@ -5,7 +5,7 @@ export default function Lounge() {
     return (
         <div className={'lounge_container'}>
             <div className={'flex-column'}>
-                <main className={'pg_main'}>
+                <main className={'pg_container'}>
                     <Title titleText={'LEXUS LOUNGE'}/>
                     <section className={'section_lounge'}>
                         <figure>
