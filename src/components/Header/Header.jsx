@@ -29,7 +29,12 @@ export default function Header() {
                     <ul className={'item_list'}>
                         <li className={'item'}>
                             <Link to={user ? `/lexus-lounge` : '/login'}>
-                                {user ? `${user.displayName} LEXUS LOUNGE` : "MY LEXUS LOUNGE"}
+                                LEXUS LOUNGE
+                            </Link>
+                        </li>
+                        <li className={'item'}>
+                            <Link to={user ? `/lexus-lounge` : '/login'}>
+                                MY ACCOUNT
                             </Link>
                         </li>
                         <li className={'item'}>
