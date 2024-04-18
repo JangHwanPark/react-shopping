@@ -7,16 +7,30 @@
 
 // MyAccount Category Design
 .category {
-  width: 300px;
+  width: 768px;
   margin: 0 auto;
+  border-bottom: 1px solid variables.$main-color;
 
   ul {
     width: 100%;
-    margin: 3rem 0;
+    margin: 3rem 0 1rem 0;
 
     li {
       font-size: 1.5rem;
       font-weight: 600;
     }
+  }
+}
+
+// Main Contents
+.main_account {
+  width: 768px;
+  margin: 0 auto;
+}
+
+.section_account {
+
+  h2 {
+    margin-top: 5rem;
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function SectionLayout({title, children}) {
+export default function SectionLayout({title, className, children}) {
     return (
-        <section>
+        <section className={className}>
             <h2>{title}</h2>
             {children}
         </section>

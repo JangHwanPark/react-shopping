@@ -11,6 +11,7 @@
 @use "src/scss/layout/footer";
 @use "pages/account";
 @use "pages/home";
+@use "pages/login";
 @use "pages/lounge";
 @use "pages/models";
 @use "pages/modelConfig";

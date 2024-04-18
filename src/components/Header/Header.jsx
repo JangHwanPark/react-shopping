@@ -30,7 +30,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li className={'item'}>
-                                <Link to={user ? `/user/account` : '/login'}>
+                                <Link to={user ? `/user/account/my-car` : '/login'}>
                                     MY ACCOUNT
                                 </Link>
                             </li>
@@ -39,7 +39,6 @@ export default function Header() {
                             </li>
                         </ul>
                     </nav>
-
                 </div>
             </div>
         </header>

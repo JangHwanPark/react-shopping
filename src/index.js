@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             {index:true, element: <Home/>},
             {path: '/models/:modelId', element: <Models/>},
             {path: '/model/:modelId/model-configuration', element: <ModelConfiguration/>},
-            {path: '/user/:account', element: <MyAccount/>},
+            {path: '/user/account/:value', element: <MyAccount/>},
             {path: '/test-drive', element: <TestDrive/>},
             {path: '/lexus-lounge', element: <Lounge/>},
             {path: '/login', element: <Authentication/>},

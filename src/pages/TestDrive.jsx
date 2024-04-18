@@ -79,6 +79,7 @@ export default function TestDrive() {
                                             value={selectedDay}
                                             onChange={(e) => setSelectedDay(e.target.value)}
                                             options={days.map(day => ({value: day, label: day}))}
+                                            addDaySuffix={true}
                                         />
                                     </div>
                                     <Input
