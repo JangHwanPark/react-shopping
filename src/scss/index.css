@@ -9,7 +9,8 @@
 @use "src/scss/layout/flex";
 @use "src/scss/layout/header";
 @use "src/scss/layout/footer";
-@use "pages/Models";
-@use "src/scss/pages/TestDrive";
+@use "pages/models";
+@use "pages/testDrive";
+@use "pages/lounge";
 
 /*# sourceMappingURL=index.css.map */
