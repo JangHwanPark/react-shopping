@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <header className={'header'}>
-            <div className={'inner_wrap'}>
+            <div className={'inner_header flex-space-between'}>
                 <Link to={'/'} className={'logo'}>
                     <img src="/img/logo_lexus@2x.png" alt="Lexus Korea Logo"/>
                 </Link>
@@ -24,23 +24,22 @@ export default function Header() {
                             <li className={'item'}>
                                 <Link to="/test-drive">시승신청</Link>
                             </li>
+                            <li className={'item'}>
+                                <Link to={user ? `/lexus-lounge` : '/login'}>
+                                    LEXUS LOUNGE
+                                </Link>
+                            </li>
+                            <li className={'item'}>
+                                <Link to={user ? `/lexus-lounge` : '/login'}>
+                                    MY ACCOUNT
+                                </Link>
+                            </li>
+                            <li className={'item'}>
+                                <Link to="/login">{user ? "LOGOUT" : "LOGIN"}</Link>
+                            </li>
                         </ul>
                     </nav>
-                    <ul className={'item_list'}>
-                        <li className={'item'}>
-                            <Link to={user ? `/lexus-lounge` : '/login'}>
-                                LEXUS LOUNGE
-                            </Link>
-                        </li>
-                        <li className={'item'}>
-                            <Link to={user ? `/lexus-lounge` : '/login'}>
-                                MY ACCOUNT
-                            </Link>
-                        </li>
-                        <li className={'item'}>
-                            <Link to="/login">{user ? "LOGOUT" : "LOGIN"}</Link>
-                        </li>
-                    </ul>
+
                 </div>
             </div>
         </header>
