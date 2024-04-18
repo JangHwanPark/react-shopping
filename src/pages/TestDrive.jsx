@@ -44,60 +44,67 @@ export default function TestDrive() {
                 <form action="" className={'test_drive_form inner_wrap'}>
                     <div className={'contents_wrap cont_center'}>
                         <div className={'cont_main'}>
+                            {/* select showroom*/}
                             <section className={'showroom_section'}>
                                 <h2 className={'cont-title'}>전시장 선택</h2>
-                                <Select
-                                    id="test_drive_show_rooms"
-                                    className="select_show_rooms"
-                                    value={selectedShowroom}
-                                    onChange={(e) => setSelectedShowroom(e.target.value)}
-                                    options={showRooms.map(({name, address}) => (
-                                        {value: address, label: name}
-                                    ))}
-                                />
+                                <div className={'select_wrap'}>
+                                    <Select
+                                        id="test_drive_show_rooms"
+                                        className="select_show_rooms"
+                                        value={selectedShowroom}
+                                        onChange={(e) => setSelectedShowroom(e.target.value)}
+                                        options={showRooms.map(({name, address}) => (
+                                            {value: address, label: name}
+                                        ))}
+                                    />
+                                </div>
                             </section>
-                            <section className={'personal_info_section'}>
+
+                            {/* input user info */}
+                            <section className={'section_info'}>
                                 <h2 className={'cont-title'}>개인정보 입력</h2>
-                                <div className={'date_picker flex'}>
-                                    <label htmlFor="test_drive_month">시승 희망일</label>
-                                    <Select
-                                        id="test_drive_month"
-                                        className="select_month"
-                                        value={String(month)}
-                                        onChange={(e) => setMonth(Number(e.target.value))}
-                                        options={months.map(({value, label}) => ({value, label}))}
+                                <div className={'info_wrap flex-column'}>
+                                    <div className={'date_picker flex'}>
+                                        <h3>시승 날짜 선택</h3>
+                                        <Select
+                                            id="test_drive_month"
+                                            className="select_month"
+                                            value={String(month)}
+                                            onChange={(e) => setMonth(Number(e.target.value))}
+                                            options={months.map(({value, label}) => ({value, label}))}
+                                        />
+                                        <Select
+                                            id="test_drive_day"
+                                            className="select_day"
+                                            value={selectedDay}
+                                            onChange={(e) => setSelectedDay(e.target.value)}
+                                            options={days.map(day => ({value: day, label: day}))}
+                                        />
+                                    </div>
+                                    <Input
+                                        id={'name_input'}
+                                        divClassName={'flex-column text_wrap'}
+                                        className={'primary_input input_info'}
+                                        title={'이름'}
+                                        type="text"
+                                        placeholder={"이름을 입력하세요."}
                                     />
-                                    <Select
-                                        id="test_drive_day"
-                                        className="select_day"
-                                        value={selectedDay}
-                                        onChange={(e) => setSelectedDay(e.target.value)}
-                                        options={days.map(day => ({value: day, label: day}))}
+                                    <Input
+                                        id={'phone_input'}
+                                        divClassName={'flex-column text_wrap'}
+                                        className={'primary_input input_info'}
+                                        title={'전화번호'}
+                                        type="text"
+                                        placeholder={"전화번호를 입력하세요."}
                                     />
+                                    <div className={'btn-wrap'}>
+                                        <div className={'flex-space-around'}>
+                                            <Button className={'btn-primary'} title={'돌아가기'}/>
+                                            <Button className={'btn-primary'} title={'신청하기'}/>
+                                        </div>
+                                    </div>
                                 </div>
-                                <Input
-                                    id={'name_input'}
-                                    className={'primary_input'}
-                                    divClassName={'flex'}
-                                    title={'이름'}
-                                    type="text"
-                                    placeholder={"이름을 입력하세요."}
-                                />
-                                <Input
-                                    id={'phone_input'}
-                                    className={'primary_input'}
-                                    divClassName={'flex'}
-                                    title={'전화번호'}
-                                    type="text"
-                                    placeholder={"전화번호를 입력하세요."}
-                                />
                             </section>
-                            <div className={'btn-wrap'}>
-                                <div className={'flex-space-around'}>
-                                    <Button className={'btn-primary'} title={'신청하기'}/>
-                                    <Button className={'btn-primary'} title={'돌아가기'}/>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </form>
