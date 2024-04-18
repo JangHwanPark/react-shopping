@@ -1,0 +1,36 @@
+@use "src/scss/variables";
+
+// main
+.model_config {
+  height: 100%;
+  margin: 0 5rem;
+}
+
+// title
+.model_title_wrap {
+  margin: 0 2.5rem;
+  align-items: center;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+// section
+.section_menu,
+.section_model {
+  width: 100%;
+}
+
+.section_menu {
+  padding-top: 6rem;
+}
+
+.section_model {
+  padding: 6rem 0
+}

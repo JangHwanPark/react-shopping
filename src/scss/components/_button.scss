@@ -1,5 +1,11 @@
 @use 'src/scss/variables';
 
+// Button
+.btn-wrap {
+  width: 290px;
+  margin: 0 auto;
+}
+
 .btn-primary {
   display: inline-block;
   padding: 15px 30px;

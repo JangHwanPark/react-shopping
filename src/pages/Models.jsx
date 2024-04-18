@@ -30,7 +30,7 @@ export default function Models() {
                         src={models[currentTab].imgWhitePear}
                         alt={models[currentTab].name}
                     />
-                    {/* Model info */}
+                    {/* Model info Table */}
                     <ProductInformation
                         className={'info_wrapper flex-center'}
                         ulClassName={'info_list flex'}
