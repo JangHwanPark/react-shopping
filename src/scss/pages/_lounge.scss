@@ -1,0 +1,18 @@
+@use "src/scss/variables";
+
+.lounge_container {
+  width: 100%;
+}
+
+// Notice
+.section_notice {
+  border: 1px solid variables.$main-color;
+}
+
+.notice_wrap {
+  padding: 3rem 5rem;
+}
+
+.section_lounge {
+  width: 100%;
+}

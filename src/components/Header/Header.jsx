@@ -30,7 +30,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li className={'item'}>
-                                <Link to={user ? `/lexus-lounge` : '/login'}>
+                                <Link to={user ? `/user/account` : '/login'}>
                                     MY ACCOUNT
                                 </Link>
                             </li>
