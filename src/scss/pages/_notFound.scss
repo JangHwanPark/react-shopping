@@ -1,0 +1,37 @@
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0c0c0c; // A dark background color
+
+  .error-content {
+    text-align: center;
+
+    .error-code {
+      font-size: 10rem;
+      color: #d4af37; // Gold color for the error code, symbolizing luxury
+      margin-bottom: 0.5rem;
+    }
+
+    .error-message {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+
+    .home-link {
+      font-size: 1.2rem;
+      color: #d4af37;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid #d4af37;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #d4af37;
+        color: #0c0c0c;
+      }
+    }
+  }
+}

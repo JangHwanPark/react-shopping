@@ -15,6 +15,7 @@
 @use "pages/lounge";
 @use "pages/models";
 @use "pages/modelConfig";
+@use "pages/notFound";
 @use "pages/testDrive";
 
 /*# sourceMappingURL=index.css.map */
