@@ -40,7 +40,7 @@ export default function Header() {
                             </li>
                             <li className={'item'}>
                                 <button onClick={handleSignOut}>
-                                    구글 로그아웃
+                                    로그아웃
                                 </button>
                             </li>
                         </ul>
