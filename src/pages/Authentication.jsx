@@ -9,31 +9,33 @@ export default function Authentication() {
     const {user} = useAuth();
 
     return (
-        <div className={'container'}>
+        <div className={'login_container container'}>
             <div className={'login_wrap inner_wrap'}>
                 <main className={'main_login'}>
                     <div className={'flex-center'}>
-                        <form className={'form_login'}>
-                            <Input
-                                id={'name_input'}
-                                divClassName={'flex-column text_wrap'}
-                                className={'primary_input input_info'}
-                                title={'아이디'}
-                                type="text"
-                                placeholder={"아이디를 입력하세요."}
-                            />
-                            <Input
-                                id={'name_input'}
-                                divClassName={'flex-column text_wrap'}
-                                className={'primary_input input_info'}
-                                title={'비밀번호'}
-                                type="text"
-                                placeholder={"비밀번호를 입력하세요."}
-                            />
-                            <button className={'btn-primary'}>
-                                로그인
-                            </button>
-                        </form>
+                        <section className={'section_form'}>
+                            <form className={'form_login'}>
+                                <Input
+                                    id={'username_input'}
+                                    divClassName={'flex-column'}
+                                    className={'primary_input'}
+                                    title={'아이디'}
+                                    type="text"
+                                    placeholder={"아이디를 입력하세요."}
+                                />
+                                <Input
+                                    id={'password_input'}
+                                    divClassName={'flex-column'}
+                                    className={'primary_input'}
+                                    title={'비밀번호'}
+                                    type="text"
+                                    placeholder={"비밀번호를 입력하세요."}
+                                />
+                                <button className={'btn-primary'}>
+                                    로그인
+                                </button>
+                            </form>
+                        </section>
                         <section className={'section_login'}>
                             <button className={'btn-primary'} onClick={handleGoogleLogin}>
                                 구글 로그인
