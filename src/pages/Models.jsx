@@ -4,23 +4,16 @@ import {Link} from "react-router-dom";
 import {useTab} from "../context/TabContext";
 
 // import Components
-import TabView from "../components/TabView/TabView";
 import ProductInformation from "../components/ProductsInformation/ProductInformation";
 import ImageBlock from "../components/Image/ImageBlock";
 import Button from "../components/Button/Button";
+import ModelLayout from "../layout/ModelLayout";
 
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
 
     return (
-        <main className={'models_container'}>
-            {/* Top */}
-            <TabView
-                title={'구매'}
-                currentTab={currentTab}
-                setCurrentTab={setCurrentTab}
-            />
-
+        <ModelLayout title={'구매'} currentTab={currentTab} setCurrentTab={setCurrentTab}>
             {/* Middle Section */}
             <div className={'flex-center'}>
                 <section className={'model_info'}>
@@ -80,6 +73,6 @@ export default function Models() {
                     {(key, value) => <img src={value} alt={`${key} 이미지`} width={'100%'}/>}
                 </ProductInformation>
             </section>
-        </main>
+        </ModelLayout>
     );
 }
