@@ -1,7 +1,9 @@
 @use 'src/scss/variables';
 
 .tabview_container {
-  margin: 2rem 0 2rem 0;
+  width: 1200px;
+  margin: 0 auto;
+  /*margin: 2rem 0 2rem 0;*/
   padding: 0 5.5rem;
   border-bottom: 1px solid variables.$main-color;
 }

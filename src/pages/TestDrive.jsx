@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import showRooms from '../data/lexus_showrooms_korea.json';
 import months from '../data/month.json';
-import models from "../data/models.json";
 
 // import Custom Hooks
 import useMonthDayPicker from "../hooks/useMonthDayPicker";
@@ -11,7 +10,6 @@ import {useTab} from "../context/TabContext";
 import Input from "../components/Input/Input";
 import Button from "../components/Button/Button";
 import Select from "../components/Select/Select";
-import ImageBlock from "../components/Image/ImageBlock";
 import ModelLayout from "../layout/ModelLayout";
 
 export default function TestDrive() {
@@ -28,13 +26,6 @@ export default function TestDrive() {
 
     return (
         <ModelLayout title={'시승'} currentTab={currentTab} setCurrentTab={setCurrentTab}>
-            {/* 선택한 모델 출력 */}
-            <ImageBlock
-                className={'selected_model_display'}
-                src={models[currentTab].imgWhitePear}
-                alt={models[currentTab].name}
-            />
-
             {/* glb 의 inner_wrap 적용됨*/}
             <form action="" className={'test_drive_form inner_wrap'}>
                 <div className={'contents_wrap cont_center'}>

@@ -5,7 +5,6 @@ import {useTab} from "../context/TabContext";
 
 // import Components
 import ProductInformation from "../components/ProductsInformation/ProductInformation";
-import ImageBlock from "../components/Image/ImageBlock";
 import Button from "../components/Button/Button";
 import ModelLayout from "../layout/ModelLayout";
 
@@ -17,12 +16,6 @@ export default function Models() {
             {/* Middle Section */}
             <div className={'flex-center'}>
                 <section className={'model_info'}>
-                    {/* 이미지 컴포넌트: 선택한 모델 출력 */}
-                    <ImageBlock
-                        className={'selected_model_img'}
-                        src={models[currentTab].imgWhitePear}
-                        alt={models[currentTab].name}
-                    />
                     {/* Model info Table */}
                     <ProductInformation
                         className={'info_wrapper flex-center'}
@@ -40,6 +33,7 @@ export default function Models() {
                             </>
                         )}
                     </ProductInformation>
+                    
                     {/* Link button */}
                     <div className={`link_wrap flex`}>
                         <Link
