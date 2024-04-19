@@ -13,7 +13,7 @@ export default function Authentication() {
             <div className={'login_wrap inner_wrap'}>
                 <main className={'main_login'}>
                     <div className={'flex-center'}>
-                        <section>
+                        <form className={'form_login'}>
                             <Input
                                 id={'name_input'}
                                 divClassName={'flex-column text_wrap'}
@@ -30,17 +30,17 @@ export default function Authentication() {
                                 type="text"
                                 placeholder={"비밀번호를 입력하세요."}
                             />
-                        </section>
-                        <section>
-                            <button onClick={handleGoogleLogin}>
-                                구글 로그인
+                            <button className={'btn-primary'}>
+                                로그인
                             </button>
-                            <button onClick={handleSignOut}>
-                                구글 로그아웃
+                        </form>
+                        <section className={'section_login'}>
+                            <button className={'btn-primary'} onClick={handleGoogleLogin}>
+                                구글 로그인
                             </button>
                         </section>
                     </div>
-                    <div>
+                    <div className={'flex-center'}>
                         <Link to={'./login'}>비밀번호를 잊으셨나요?</Link>
                         <Link to={'./login'}>계정 생성</Link>
                     </div>

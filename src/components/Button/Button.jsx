@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function Button({title, className}) {
     return (
-        <button className={className}>{title}</button>
+        <button className={className}>
+            {title}
+        </button>
     );
 }

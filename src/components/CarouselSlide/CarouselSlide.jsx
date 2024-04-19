@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import carouselImg from '../../data/carousel_img.json';
-import CarouselButton from "../Button/CarouselButton";
+import CarouselButton from "./CarouselButton";
 
 export default function CarouselSlide() {
     const [slideIdx, setSlideIdx] = useState(0);
