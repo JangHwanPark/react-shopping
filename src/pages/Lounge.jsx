@@ -12,6 +12,10 @@ export default function Lounge() {
                             <img src={'img/lounge-01.jpg'} alt={'img'}/>
                         </figure>
                         <div className={'text_wrap'}>
+                            <h2>
+                                <span>LEXUS</span>
+                                <span>LOUNGE</span>
+                            </h2>
                             <p>
                                 LEXUS LOUNGE는 렉서스 고객만을 위한<br/>
                                 프리미엄 멤버십 서비스입니다.

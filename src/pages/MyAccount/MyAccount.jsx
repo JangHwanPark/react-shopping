@@ -1,6 +1,4 @@
 import React from 'react';
-import Title from "../../components/Title/Title";
-import Category from "../../components/Category/Category";
 import {useAuth} from "../../context/AuthContext";
 import {useNavigate} from "react-router-dom";
 import SectionLayout from "../../components/SectionLayout/SectionLayout";

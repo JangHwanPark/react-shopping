@@ -13,7 +13,8 @@ export default function AccountLayout({ user, children }) {
         <div className="pg_container">
             {/* Top */}
             <Title titleText={'MY ACCOUNT'}/>
-            <h2 className={'welcome_member'}>{user.displayName} 고객님<br/>오늘도 좋은 하루 보내세요!</h2>
+            {/* Todo: MY ACCOUNT 하단에 배치 (h2) */}
+            <h2 className={'welcome_member'}>{user.displayName} 고객님 오늘도 좋은 하루 보내세요!</h2>
             {/* Todo: 저장한 모델 네이밀 변경 필요 (어색) - 장바구니같은 역할 */}
             <Category categories={categories} className={'category'}/>
 

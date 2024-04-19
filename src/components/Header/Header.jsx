@@ -23,7 +23,7 @@ export default function Header() {
                                 <Link to={`/models/${models[currentTab].name}`}>MODEL</Link>
                             </li>
                             <li className={'item'}>
-                                <Link to="/test-drive">시승신청</Link>
+                                <Link to={`/test-drive/${models[currentTab].name}`}>시승신청</Link>
                             </li>
                             <li className={'item'}>
                                 <Link to={user ? `/lexus-lounge` : '/login'}>
@@ -40,7 +40,7 @@ export default function Header() {
                             </li>
                             <li className={'item'}>
                                 <button onClick={handleSignOut}>
-                                    로그아웃
+                                    LOGOUT
                                 </button>
                             </li>
                         </ul>

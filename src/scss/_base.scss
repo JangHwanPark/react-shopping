@@ -48,7 +48,7 @@ ul {
   list-style: none;
 }
 
-//
+// Link, NavLink (a)
 a {
   color: #333;
   text-decoration: none;
@@ -57,4 +57,10 @@ a {
 //
 figure {
   margin: 0;
+}
+
+// Button
+button {
+  border: none;
+  background: none;
 }

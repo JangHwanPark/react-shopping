@@ -1,6 +1,6 @@
 import React from 'react';
 import models from "../../data/models.json";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import Title from "../Title/Title";
 
 export default function TabView({title, currentTab, setCurrentTab}) {
@@ -10,6 +10,7 @@ export default function TabView({title, currentTab, setCurrentTab}) {
         setCurrentTab(index)
     }
 
+    /* Todo: Category 컴포넌트 적용 예정 */
     return (
         <section className={'tabview_container'}>
             <Title titleText={`${title} 차량 선택`}/>

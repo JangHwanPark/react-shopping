@@ -23,17 +23,18 @@ const router = createBrowserRouter([
         children: [
             {index:true, element: <Home/>},
             {path: '/models/:modelId', element: <Models/>},
+            {path: '/test-drive/:modelId', element: <TestDrive/>},
+            {path: '/lexus-lounge', element: <Lounge/>},
             {path: '/model/:modelId/model-configuration', element: <ModelConfiguration/>},
             {path: '/user/account/:userId/my-account', element: <MyAccount/>},
-            { path: '/user/account/:userId/my-car', element: <MyCar/> },
+            {path: '/user/account/:userId/my-car', element: <MyCar/>},
             {path: '/user/account/:userId/saved-models', element: <SavedModels/>},
-            {path: '/test-drive', element: <TestDrive/>},
-            {path: '/lexus-lounge', element: <Lounge/>},
             {path: '/login', element: <Authentication/>},
         ]
     }
 ])
 
+/* Todo: 나중에 스트릭 모드 제거 */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
