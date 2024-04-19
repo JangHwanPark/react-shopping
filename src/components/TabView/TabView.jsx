@@ -1,6 +1,6 @@
 import React from 'react';
 import models from "../../data/models.json";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import Title from "../Title/Title";
 
 export default function TabView({title, currentTab, setCurrentTab}) {
@@ -16,9 +16,9 @@ export default function TabView({title, currentTab, setCurrentTab}) {
             <ul className={'tabview_list'}>
                 {models.map(({name}, index) => (
                     <li className={'tabview_item'} key={index} onClick={() => selectMenuHandler(index)}>
-                        <Link className={'tabview_link'} to={`/models/${name}`}>
+                        <NavLink className={({isActive}) => isActive ? 'tabview_link active' : 'tabview_link'} to={`/models/${name}`}>
                             <p><strong>{name}</strong></p>
-                        </Link>
+                        </NavLink>
                     </li>
                 ))}
             </ul>
