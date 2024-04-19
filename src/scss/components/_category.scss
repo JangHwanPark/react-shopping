@@ -1,3 +1,10 @@
 @use 'src/scss/variables';
 
 // Category Style 1
+// color 임시값
+.category {
+  .active {
+    color: red;
+    font-weight: bold;
+  }
+}

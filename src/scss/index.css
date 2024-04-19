@@ -2,6 +2,7 @@
 @use "variables";
 @use "src/scss/components/button";
 @use "src/scss/components/CarouselSlide";
+@use "src/scss/components/category";
 @use "src/scss/components/input";
 @use "src/scss/components/select";
 @use "src/scss/components/TabView";

@@ -8,7 +8,7 @@ import {handleSignOut} from "../../utils/fbInstance";
 
 export default function Header() {
     const {user} = useAuth();
-    const {currentTab, setCurrentTab} = useTab();
+    const {currentTab} = useTab();
 
     return (
         <header className={'header'}>
@@ -31,7 +31,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li className={'item'}>
-                                <Link to={user ? `/user/account/my-car` : '/login'}>
+                                <Link to={user ? `/user/account/${user.displayName}/my-car` : '/login'}>
                                     MY ACCOUNT
                                 </Link>
                             </li>

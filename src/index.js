@@ -8,10 +8,12 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Models from "./pages/Models";
 import ModelConfiguration from "./pages/ModelConfiguration";
-import MyAccount from "./pages/MyAccount";
+import MyAccount from "./pages/MyAccount/MyAccount";
 import Lounge from "./pages/Lounge";
 import TestDrive from "./pages/TestDrive";
 import Authentication from "./pages/Authentication";
+import SavedModels from "./pages/MyAccount/SavedModels";
+import MyCar from "./pages/MyAccount/MyCar";
 
 const router = createBrowserRouter([
     {
@@ -22,7 +24,9 @@ const router = createBrowserRouter([
             {index:true, element: <Home/>},
             {path: '/models/:modelId', element: <Models/>},
             {path: '/model/:modelId/model-configuration', element: <ModelConfiguration/>},
-            {path: '/user/account/:value', element: <MyAccount/>},
+            {path: '/user/account/:userId/my-account', element: <MyAccount/>},
+            { path: '/user/account/:userId/my-car', element: <MyCar/> },
+            {path: '/user/account/:userId/saved-models', element: <SavedModels/>},
             {path: '/test-drive', element: <TestDrive/>},
             {path: '/lexus-lounge', element: <Lounge/>},
             {path: '/login', element: <Authentication/>},
