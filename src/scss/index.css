@@ -4,6 +4,7 @@
 @use "src/scss/components/CarouselSlide";
 @use "src/scss/components/category";
 @use "src/scss/components/input";
+@use "src/scss/components/productsCard";
 @use "src/scss/components/select";
 @use "src/scss/components/TabView";
 @use "src/scss/components/title";

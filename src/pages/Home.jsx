@@ -6,7 +6,7 @@ import ProductsCard from "../components/ProductsCard/ProductsCard";
 
 export default function Home() {
     return (
-        <main className={'contents'}>
+        <main className={'contents flex-column'}>
             <CarouselSlide/>
             <ProductsCard models={models}/>
         </main>
