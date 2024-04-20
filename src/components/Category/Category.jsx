@@ -12,7 +12,11 @@ export default function Category({categories, className}) {
             <ul className={'flex-space-around'}>
                 {categories.map((category, index) => (
                     <li key={index}>
-                        <NavLink className={({isActive}) => isActive ? 'active' : ''} to={category.path}>{category.name}</NavLink>
+                        <NavLink
+                            className={({isActive}) => isActive ? 'active' : ''}
+                            to={category.path}>
+                            {category.name}
+                        </NavLink>
                     </li>
                 ))}
             </ul>
