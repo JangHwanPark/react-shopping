@@ -1,69 +1,32 @@
-import React, {useEffect, useState} from 'react';
-import {useTab} from "../../context/TabContext";
+import React from 'react';
 import ImageBlock from "../../components/Image/ImageBlock";
 import models from "../../data/models.json";
 import ProductInformation from "../../components/ProductsInformation/ProductInformation";
-import {useNavigate, useParams} from "react-router-dom";
 import StatefulTab from "../../components/TabComponents/StatefulTab";
 import ModelConfigButton from "../../components/Button/ModelConfigButton";
 import ConfigurationContainer from "../../components/TabComponents/ModelSections";
 import SelectMenu from "../../components/Select/SelectMenu";
+import useModelSettings from "../../hooks/useModelSettings";
+import useSectionNavigation from "../../hooks/useSectionNavigation";
+import useModelTab from "../../hooks/useModelTab";
+import {useParams} from "react-router-dom";
 
 export default function ModelConfiguration() {
-    const navigate = useNavigate();
-    const {modelId} = useParams();
-    const {currentTab, setCurrentTab} = useTab();
-    const [selectedModel, setSelectedModel] = useState(modelId); // 초기 상태를 useParams로 설정
-
-    // 각 섹션의 현재 선택 상태를 관리하는 상태 변수
+    const { modelId } = useParams();
+    const [selectedModel, handleModelChange, currentTab] = useModelTab(modelId);
+    const [selectedSectionIndex, nextSection, prevSection] = useSectionNavigation();
+    const {
+        modelGrade,
+        setModelGrade,
+        selectedExterior,
+        setSelectedExterior,
+        selectedInterior,
+        setSelectedInterior,
+        estimatedPrice,
+        setEstimatedPrice
+    } = useModelSettings(models[currentTab]?.basePrice || 0);
     const sections = ['모델 및 등급', '익스테리어', '인테리어', '선택완료'];
-    const [selectedSectionIndex, setSelectedSectionIndex] = useState(0);
 
-    // 사용자 정의 모델 상태 저장
-    const [modelGrade, setModelGrade] = useState('');
-    const [selectedExterior, setSelectedExterior] = useState('');
-    const [selectedInterior, setSelectedInterior] = useState('');
-    const [estimatedPrice, setEstimatedPrice] = useState(models[currentTab].basePrice);
-
-    const handleModelGradeChange = (grade) => setModelGrade(grade);
-    const handleExteriorChange = (color) => setSelectedExterior(color);
-    const handleInteriorChange = (color) => setSelectedInterior(color);
-
-    // 다음 or 이전 탭으로 이동
-    const handleClickNext = () => {
-        if (selectedSectionIndex < sections.length - 1) {
-            setSelectedSectionIndex(selectedSectionIndex + 1);
-        }
-    }
-
-    const handleClickPrev = () => {
-        if (selectedSectionIndex > 0) {
-            setSelectedSectionIndex(selectedSectionIndex - 1);
-        }
-    }
-
-    // 모델 변경에 따라 처리할 로직
-    useEffect(() => {
-        // 모델 ID에 따라 필요한 데이터를 불러오거나 상태를 업데이트
-        setSelectedModel(modelId);
-    }, [modelId]);
-
-    // 셀렉트 메뉴에서 모델 변경 처리
-    const handleModelChange = (newModelId) => {
-        setSelectedModel(newModelId);
-        updateCurrentTab(newModelId)
-        navigate(`/model/${newModelId}/model-configuration`); // 새로운 모델 ID로 라우트 변경
-    };
-
-    // 모델 ID에 따라 탭 인덱스를 업데이트
-    const updateCurrentTab = (modelId) => {
-        const tabIndex = models.findIndex(model => model.name === modelId);
-        console.log(tabIndex, modelId)
-        if (tabIndex !== -1) setCurrentTab(tabIndex);
-    };
-
-    console.log('ModelConfiguration test: ', selectedModel)
-    console.log('ModelConfiguration currentTab: ', currentTab)
     return (
         <div className={'model_config_container'}>
             <main className={'model_config flex-column'}>
@@ -99,11 +62,11 @@ export default function ModelConfiguration() {
                         )}
                     </ProductInformation>
                     <div className={'tab_header_wrap flex-center'}>
-                        {['모델 및 등급', '익스테리어', '인테리어', '선택완료'].map((sectionName, index) => (
+                        {sections.map((sectionName, index) => (
                             <StatefulTab
                                 key={index}
                                 title={sectionName}
-                                onClick={() => setSelectedSectionIndex(index)}
+                                onClick={() => selectedSectionIndex(index)}
                                 isSelected={selectedSectionIndex === index}
                             />
                         ))}
@@ -132,17 +95,17 @@ export default function ModelConfiguration() {
                                     selectedInterior={selectedInterior}
                                     modelGrade={modelGrade}
                                     estimatedPrice={estimatedPrice}
-                                    onModelGradeChange={handleModelGradeChange}
-                                    onExteriorChange={handleExteriorChange}
-                                    onInteriorChange={handleInteriorChange}
+                                    onModelGradeChange={setModelGrade}
+                                    onExteriorChange={setSelectedExterior}
+                                    onInteriorChange={setSelectedInterior}
                                 />
                             }
                         </div>
 
                         {/* Button */}
                         <ModelConfigButton
-                            onPrev={handleClickPrev}
-                            onNext={handleClickNext}
+                            onPrev={prevSection}
+                            onNext={nextSection}
                             isFinalStep={selectedSectionIndex === sections.length - 1}
                         />
                     </section>

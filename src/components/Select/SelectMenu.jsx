@@ -33,8 +33,8 @@ export default function SelectMenu({ className, value, onChange, options, defaul
             )}
 
             {/* options 배열을 순회하여, 각 옵션을 <option> 태그로 변환 */}
-            {options.map(({value, label}) => (
-                <option key={value} value={value}>
+            {options.map(({value, label}, index) => (
+                <option key={`${value} - ${index}`} value={value}>
                     {/* rest 객체 내 addDaySuffix가 true면 날짜에 '일' 접미사를 추가 */}
                     {addDaySuffix ? `${label}일` : label}
                 </option>
