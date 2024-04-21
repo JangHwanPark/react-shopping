@@ -2,20 +2,12 @@ import React from 'react';
 import models from "../../data/models.json";
 import {Link} from "react-router-dom";
 import {useTab} from "../../context/TabContext";
+import {fieldMappings} from "../../data/my_car";
 
 // import Components
 import ProductInformation from "../../components/ProductsInformation/ProductInformation";
 import ModelLayout from "../../layout/ModelLayout";
 import Title from "../../components/Title/Title";
-
-const fieldMappings = {
-    type: '차종',
-    engineType: '엔진 타입',
-    fuelType: '연료 타입',
-    maxPowerHP: '최대 출력(HP)',
-    basePrice: '기본 가격',
-    MPGe: '연비(MPGe)'
-};
 
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();

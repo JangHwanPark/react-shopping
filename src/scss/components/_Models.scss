@@ -11,12 +11,11 @@
   }
 
   ul li {
-    width: 300px;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid variables.$main-color;
+    cursor: pointer;
   }
 
   ul li:first-child {

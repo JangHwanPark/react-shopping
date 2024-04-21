@@ -10,6 +10,7 @@ import useModelSettings from "../../hooks/useModelSettings";
 import useSectionNavigation from "../../hooks/useSectionNavigation";
 import useModelTab from "../../hooks/useModelTab";
 import {useParams} from "react-router-dom";
+import {fieldMappings} from "../../data/my_car";
 
 export default function ModelConfiguration() {
     const { modelId } = useParams();
@@ -56,7 +57,7 @@ export default function ModelConfiguration() {
                         {/* 전달받은 value 를 span 태그로 감싸서 출력 */}
                         {(key, value) => (
                             <>
-                                <span>{key}</span>
+                                <span>{fieldMappings[key] || [key]}</span>
                                 <span><strong>{value}</strong></span>
                             </>
                         )}

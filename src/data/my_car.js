@@ -16,3 +16,12 @@ export const interiorColor = [
     {'color': 'MAUVE', 'rgb': 'rgb(77, 65, 58)'},
     {'color': 'BLACK', 'rgb': 'rgb(20, 20, 20)'},
 ];
+
+export const fieldMappings = {
+    type: '차종',
+    engineType: '엔진 타입',
+    fuelType: '연료 타입',
+    maxPowerHP: '최대 출력(HP)',
+    basePrice: '기본 가격',
+    MPGe: '연비(MPGe)'
+};
