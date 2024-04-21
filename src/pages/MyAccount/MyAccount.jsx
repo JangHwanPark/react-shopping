@@ -3,13 +3,13 @@ import {useAuth} from "../../context/AuthContext";
 import SectionLayout from "../../components/SectionLayout/SectionLayout";
 import UnorderedList from "../../components/UnorderedList/UnorderedList";
 import AccountLayout from "../../layout/AccountLayout";
-import UseAuthRedirect from "../../hooks/useAuthRedirect";
+import useAuthRedirect from "../../hooks/useAuthRedirect";
 
 export default function MyAccount() {
     const {user} = useAuth();
 
     // 로그인이 되어 있지 않다면 로그인 페이지로 이동
-    UseAuthRedirect(user)
+    useAuthRedirect(user)
 
     // 필요한 사용자 정보만 추출
     const userDetails = user ? {

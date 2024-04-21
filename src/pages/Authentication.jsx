@@ -2,11 +2,16 @@ import React from 'react';
 import {useAuth} from "../context/AuthContext";
 import {handleGoogleLogin} from "../utils/fbInstance";
 import Input from "../components/Input/Input";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import Button from "../components/Button/Button";
 
 export default function Authentication() {
-    // Context Data 가져오기
-    const {user} = useAuth();
+    // Note: 로그인 성공시 Home 컴포넌트로 redirect
+    const navigate = useNavigate();
+    const handleLogin = () => {
+        handleGoogleLogin();
+        navigate('/');
+    }
 
     return (
         <div className={'login_container container'}>
@@ -38,9 +43,7 @@ export default function Authentication() {
                         {/* Social Login */}
                         <section className={'section_social'}>
                             <h2>CONTINUE WITH A SOCIAL LOGIN</h2>
-                            <button className={'btn-primary'} onClick={handleGoogleLogin}>
-                                구글 로그인
-                            </button>
+                            <Button title={'구글 로그인'} className={'btn-primary'} onClick={handleLogin}/>
                         </section>
                     </section>
                     <div className={'flex-space-around'}>

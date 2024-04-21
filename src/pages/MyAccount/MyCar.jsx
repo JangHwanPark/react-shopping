@@ -1,36 +1,48 @@
 import React, {useEffect} from 'react';
 import {useAuth} from "../../context/AuthContext";
-import {Link, useNavigate} from "react-router-dom";
 import AccountLayout from "../../layout/AccountLayout";
 import SectionLayout from "../../components/SectionLayout/SectionLayout";
 import UnorderedList from "../../components/UnorderedList/UnorderedList";
 import Button from "../../components/Button/Button";
-import UseAuthRedirect from "../../hooks/useAuthRedirect";
+import useAuthRedirect from "../../hooks/useAuthRedirect";
 
 export default function MyCar() {
     const {user} = useAuth();
 
+    // DebugLog
+    console.log('MyCar: ', user)
+
     // 로그인이 되어 있지 않다면 로그인 페이지로 이동
-    UseAuthRedirect(user)
+    useAuthRedirect(user)
 
     // 차량 정보가 있는지 확인하는 flag
     const hasVehicleDetails = user && user.vehicleDetails;
-    
+
     // 최근 정비 내역이 있는지 확인하는 flag
     const hasMaintenanceHistory = user && user.maintenanceHistory;
-    
+
+    /*
+     * '대표 차량': user.vehicleDetails?.model,
+     * '차량 별명': user.vehicleDetails?.nickname,
+     *  '차량 번호': user.vehicleDetails?.licensePlate,
+     *  '모델명': user.vehicleDetails?.modelName,
+     *  '차대 번호': user.vehicleDetails?.chassisNumber,
+     *  '출고 일자': user.vehicleDetails?.releaseDate,
+     */
     // 필요한 사용자 정보만 추출
     const userDetails = user ? {
-        '대표 차량': user.phoneNumber,
-        '차량 별명': user.phoneNumber,
-        '차량 번호': user.phoneNumber,
-        '모델명': user.phoneNumber,
-        '차대 번호': user.phoneNumber,
-        '출고 일자': user.phoneNumber,
+        '대표 차량': user.vehicleDetails?.model,
+        '차량 별명': user.vehicleDetails?.phoneNumber,
+        '차량 번호': user.vehicleDetails?.phoneNumber,
+        '모델명': user.vehicleDetails?.phoneNumber,
+        '차대 번호': user.vehicleDetails?.phoneNumber,
+        '출고 일자': user.vehicleDetails?.phoneNumber,
     } : {};
 
-    // userDetails를 배열로 변환 (UnorderedList 컴포넌트가 배열만 받음)
-    const userDetailsArray = Object.entries(userDetails).map(([key, value]) => ({ key, value }));
+    // userDetails 를 배열로 변환 (UnorderedList 컴포넌트가 배열만 받음)
+    const userDetailsArray = Object.entries(userDetails).map(([key, value]) => (
+        {key, value}
+    ));
 
     return (
         <AccountLayout user={user}>

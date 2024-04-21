@@ -2,11 +2,10 @@
 @use "variables";
 @use "src/scss/components/button";
 @use "src/scss/components/CarouselSlide";
-@use "src/scss/components/category";
+@use "components/navigationalTabs";
 @use "src/scss/components/input";
 @use "src/scss/components/productsCard";
 @use "src/scss/components/select";
-@use "src/scss/components/TabView";
 @use "src/scss/components/title";
 @use "src/scss/layout/flex";
 @use "src/scss/layout/header";

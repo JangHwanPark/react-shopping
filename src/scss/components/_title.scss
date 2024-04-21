@@ -3,6 +3,7 @@
 .page_title {
   padding: 3rem 0 2rem 0;
   text-align: center;
+  white-space: pre-line; /* \n을 줄바꿈으로 처리 */
 
   &:after {
     width: 1px;

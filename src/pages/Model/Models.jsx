@@ -1,18 +1,22 @@
 import React from 'react';
-import models from "../data/models.json";
+import models from "../../data/models.json";
 import {Link} from "react-router-dom";
-import {useTab} from "../context/TabContext";
+import {useTab} from "../../context/TabContext";
 
 // import Components
-import ProductInformation from "../components/ProductsInformation/ProductInformation";
-import Button from "../components/Button/Button";
-import ModelLayout from "../layout/ModelLayout";
+import ProductInformation from "../../components/ProductsInformation/ProductInformation";
+import Button from "../../components/Button/Button";
+import ModelLayout from "../../layout/ModelLayout";
 
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
 
     return (
-        <ModelLayout title={'구매'} currentTab={currentTab} setCurrentTab={setCurrentTab}>
+        <ModelLayout
+            title={'구매 차량 선택'}
+            currentTab={currentTab}
+            setCurrentTab={setCurrentTab}
+        >
             {/* Middle Section */}
             <div className={'flex-center'}>
                 <section className={'model_info'}>

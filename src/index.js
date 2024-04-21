@@ -6,11 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
-import Models from "./pages/Models";
-import ModelConfiguration from "./pages/ModelConfiguration";
+import Models from "./pages/Model/Models";
+import ModelConfiguration from "./pages/Model/ModelConfiguration";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import Lounge from "./pages/Lounge";
-import TestDrive from "./pages/TestDrive";
+import TestDrive from "./pages/Model/TestDrive";
 import Authentication from "./pages/Authentication";
 import SavedModels from "./pages/MyAccount/SavedModels";
 import MyCar from "./pages/MyAccount/MyCar";
@@ -37,9 +37,7 @@ const router = createBrowserRouter([
 /* Todo: 나중에 스트릭 모드 제거 */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-        <RouterProvider router={router}/>
-    </React.StrictMode>
+    <RouterProvider router={router}/>
 );
 
 reportWebVitals();

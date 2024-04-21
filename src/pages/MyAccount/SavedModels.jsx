@@ -4,14 +4,14 @@ import {useAuth} from "../../context/AuthContext";
 import {Link} from "react-router-dom";
 import {useTab} from "../../context/TabContext";
 import models from "../../data/models.json";
-import UseAuthRedirect from "../../hooks/useAuthRedirect";
+import useAuthRedirect from "../../hooks/useAuthRedirect";
 
 export default function SavedModels() {
     const {currentTab} = useTab();
     const {user} = useAuth();
 
     // 로그인이 되어 있지 않다면 로그인 페이지로 이동
-    UseAuthRedirect(user)
+    useAuthRedirect(user)
 
     return (
         <AccountLayout user={user}>

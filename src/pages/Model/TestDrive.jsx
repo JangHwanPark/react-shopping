@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
-import showRooms from '../data/lexus_showrooms_korea.json';
-import months from '../data/month.json';
+import showRooms from '../../data/lexus_showrooms_korea.json';
+import months from '../../data/month.json';
 
 // import Custom Hooks
-import useMonthDayPicker from "../hooks/useMonthDayPicker";
-import {useTab} from "../context/TabContext";
+import useMonthDayPicker from "../../hooks/useMonthDayPicker";
+import {useTab} from "../../context/TabContext";
 
 // import Components
-import Input from "../components/Input/Input";
-import Button from "../components/Button/Button";
-import Select from "../components/Select/Select";
-import ModelLayout from "../layout/ModelLayout";
+import Input from "../../components/Input/Input";
+import Button from "../../components/Button/Button";
+import Select from "../../components/Select/Select";
+import ModelLayout from "../../layout/ModelLayout";
+import models from "../../data/models.json";
 
 export default function TestDrive() {
     const {currentTab, setCurrentTab} = useTab();
@@ -24,8 +25,13 @@ export default function TestDrive() {
     // 선택된 쇼룸의 이름을 상태로 관리
     const [selectedShowroom, setSelectedShowroom] = useState('');
 
+    console.log('TestDrive: ', models[currentTab]);
     return (
-        <ModelLayout title={'시승'} currentTab={currentTab} setCurrentTab={setCurrentTab}>
+        <ModelLayout
+            title={'시승 차량 선택'}
+            currentTab={currentTab}
+            setCurrentTab={setCurrentTab}
+        >
             {/* glb 의 inner_wrap 적용됨*/}
             <form action="" className={'test_drive_form inner_wrap'}>
                 <div className={'contents_wrap cont_center'}>

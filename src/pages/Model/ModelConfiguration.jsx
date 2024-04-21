@@ -1,9 +1,9 @@
 import React from 'react';
-import {useTab} from "../context/TabContext";
-import ImageBlock from "../components/Image/ImageBlock";
-import models from "../data/models.json";
-import ProductInformation from "../components/ProductsInformation/ProductInformation";
-import Button from "../components/Button/Button";
+import {useTab} from "../../context/TabContext";
+import ImageBlock from "../../components/Image/ImageBlock";
+import models from "../../data/models.json";
+import ProductInformation from "../../components/ProductsInformation/ProductInformation";
+import Button from "../../components/Button/Button";
 import {useParams} from "react-router-dom";
 
 export default function ModelConfiguration() {
