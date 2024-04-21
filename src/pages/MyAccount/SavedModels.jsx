@@ -13,8 +13,10 @@ export default function SavedModels() {
 
     return (
         <AccountLayout user={user}>
-            저장한 차량이 없습니다.
-            <Link to={`/models/${models[currentTab].name}`}>차량 설정</Link>
+            <p>저장한 차량이 없습니다.</p>
+            <Link className={'btn-primary'} to={`/models/${models[currentTab].name}`}>
+                차량 설정
+            </Link>
         </AccountLayout>
     );
 }

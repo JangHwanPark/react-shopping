@@ -4,6 +4,7 @@ import {Link, useNavigate} from "react-router-dom";
 import AccountLayout from "../../layout/AccountLayout";
 import SectionLayout from "../../components/SectionLayout/SectionLayout";
 import UnorderedList from "../../components/UnorderedList/UnorderedList";
+import Button from "../../components/Button/Button";
 
 export default function MyCar() {
     const {user} = useAuth();
@@ -42,10 +43,13 @@ export default function MyCar() {
                         listItems={userDetailsArray}
                     />
                 ) : (
-                    <div>
+                    <div className={'not_registered'}>
                         <p>차량이 등록되어 있지 않습니다.</p>
-                        {/*<Link to="/vehicle-register" className="button">차량 등록하기</Link>*/}
-                        <p onClick={() => alert('준비중 입니다.')}>차량 등록하기</p>
+                        <Button
+                            className={'btn-primary'}
+                            onClick={() => alert('준비중 입니다.')}
+                            title={'차량 등록하기'}
+                        />
                     </div>
                 )}
             </SectionLayout>
@@ -58,7 +62,14 @@ export default function MyCar() {
                         위치: [위치]
                     </address>
                 ) : (
-                    <p>최근 정비내역이 존재하지 않습니다.</p>
+                    <div className={'not_registered'}>
+                        <p>최근 정비내역이 존재하지 않습니다.</p>
+                        <Button
+                            className={'btn-primary'}
+                            onClick={() => alert('준비중 입니다.')}
+                            title={'정비 예약하기'}
+                        />
+                    </div>
                 )}
             </SectionLayout>
         </AccountLayout>
