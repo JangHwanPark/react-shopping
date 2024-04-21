@@ -13,6 +13,7 @@ import Select from "../../components/Select/Select";
 import ModelLayout from "../../layout/ModelLayout";
 import models from "../../data/models.json";
 import {Link} from "react-router-dom";
+import ComingSoon from "../../utils/comingSoon";
 
 export default function TestDrive() {
     const {currentTab, setCurrentTab} = useTab();
@@ -105,7 +106,7 @@ export default function TestDrive() {
                                         <Button
                                             className={'btn-primary'}
                                             title={'신청하기'}
-                                            onClick={() => alert('준비중 입니다.')}
+                                            onClick={ComingSoon}
                                         />
                                     </div>
                                 </div>

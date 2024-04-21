@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "./Button";
+import ComingSoon from "../../utils/comingSoon";
 
 export default function ModelConfigButton({ onPrev, onNext, isFinalStep }) {
     return (
@@ -11,8 +12,8 @@ export default function ModelConfigButton({ onPrev, onNext, isFinalStep }) {
                 </>
             ) : (
                 <>
-                    <Button title={'저장하기'} className={'config_btn btn-primary'}/>
-                    <Button title={'시승신청'} className={'config_btn btn-primary'}/>
+                    <Button title={'저장하기'} className={'config_btn btn-primary'} onClick={ComingSoon}/>
+                    <Button title={'시승신청'} className={'config_btn btn-primary'} onClick={ComingSoon}/>
                 </>
             )}
         </div>

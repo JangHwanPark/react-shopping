@@ -103,7 +103,6 @@ export default function ModelConfiguration() {
                                     onExteriorChange={handleExteriorChange}
                                     onInteriorChange={handleInteriorChange}
                                 />
-
                             }
                         </div>
 

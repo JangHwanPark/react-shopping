@@ -3,6 +3,7 @@ import {handleGoogleLogin} from "../utils/fbInstance";
 import Input from "../components/Input/Input";
 import {Link, useNavigate} from "react-router-dom";
 import Button from "../components/Button/Button";
+import ComingSoon from "../utils/comingSoon";
 
 export default function Authentication() {
     // Note: 로그인 성공시 Home 컴포넌트로 redirect
@@ -36,7 +37,7 @@ export default function Authentication() {
                                 type="text"
                                 placeholder={"비밀번호를 입력하세요."}
                             />
-                            <button className={'btn-primary'}>로그인</button>
+                            <button className={'btn-primary'} onClick={ComingSoon}>로그인</button>
                         </form>
 
                         {/* Social Login */}
