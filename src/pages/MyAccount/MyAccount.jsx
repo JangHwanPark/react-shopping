@@ -7,6 +7,8 @@ import UseAuthRedirect from "../../hooks/useAuthRedirect";
 
 export default function MyAccount() {
     const {user} = useAuth();
+
+    // 로그인이 되어 있지 않다면 로그인 페이지로 이동
     UseAuthRedirect(user)
 
     // 필요한 사용자 정보만 추출

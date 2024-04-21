@@ -5,15 +5,13 @@ import AccountLayout from "../../layout/AccountLayout";
 import SectionLayout from "../../components/SectionLayout/SectionLayout";
 import UnorderedList from "../../components/UnorderedList/UnorderedList";
 import Button from "../../components/Button/Button";
+import UseAuthRedirect from "../../hooks/useAuthRedirect";
 
 export default function MyCar() {
     const {user} = useAuth();
-    const navigate = useNavigate();
 
     // 로그인이 되어 있지 않다면 로그인 페이지로 이동
-    useEffect(() => {
-        if (!user) navigate("/login");
-    }, [user, navigate]);
+    UseAuthRedirect(user)
 
     // 차량 정보가 있는지 확인하는 flag
     const hasVehicleDetails = user && user.vehicleDetails;
