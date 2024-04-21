@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationalTabs from "../components/NavigationalTabs/NavigationalTabs";
+import NavigationalTabs from "../components/TabComponents/NavigationalTabs";
 
 export default function AccountLayout({ user, children }) {
     const categories = [

@@ -3,9 +3,10 @@ import {useTab} from "../../context/TabContext";
 import ImageBlock from "../../components/Image/ImageBlock";
 import models from "../../data/models.json";
 import ProductInformation from "../../components/ProductsInformation/ProductInformation";
-import Button from "../../components/Button/Button";
 import {useParams} from "react-router-dom";
-import StatefulTab from "../../components/StatefulTab/StatefulTab";
+import StatefulTab from "../../components/TabComponents/StatefulTab";
+import ModelConfigButton from "../../components/Button/ModelConfigButton";
+import ConfigurationContainer from "../../components/TabComponents/ModelSections";
 
 export default function ModelConfiguration() {
     const {modelId} = useParams();
@@ -14,7 +15,6 @@ export default function ModelConfiguration() {
     // 각 섹션의 현재 선택 상태를 관리하는 상태 변수
     const sections = ['모델 및 등급', '익스테리어', '인테리어', '선택완료'];
     const [selectedSectionIndex, setSelectedSectionIndex] = useState(0);
-    const selectedSection = sections[selectedSectionIndex];
 
     // 다음 or 이전 탭으로 이동
     const handleClickNext = () => {
@@ -28,11 +28,6 @@ export default function ModelConfiguration() {
             setSelectedSectionIndex(selectedSectionIndex - 1);
         }
     }
-
-    // 사용자가 탭을 클릭했을 때 호출될 함수
-    const handleSectionClick = (sectionName) => {
-        setSelectedSectionIndex(sectionName);
-    };
 
     return (
         <div className={'model_config_wrapper'}>
@@ -74,35 +69,25 @@ export default function ModelConfiguration() {
                     {/* Select Model info */}
                     <section className={'config_info flex-column'}>
                         <div className={'configuration_tabs'}>
-                            {['모델 및 등급', '익스테리어', '인테리어', '선택완료'].map((sectionName) => (
+                            {['모델 및 등급', '익스테리어', '인테리어', '선택완료'].map((sectionName, index) => (
                                 <StatefulTab
-                                    key={sectionName}
+                                    key={index}
                                     title={sectionName}
-                                    onClick={() => handleSectionClick(sectionName)}
-                                    isSelected={selectedSection === sectionName}
+                                    onClick={() => setSelectedSectionIndex(index)}
+                                    isSelected={selectedSectionIndex === index}
                                 />
                             ))}
-                            {/* Content based on selected section */}
+                            {/* 선택된 섹션에 해당하는 컴포넌트를 렌더링 */}
                             <div className={'configuration_content'}>
-                                {selectedSection === '모델 및 등급' && <p>여기에 모델 및 등급 관련 내용을 표시합니다.</p>}
-                                {selectedSection === '익스테리어' && <p>여기에 익스테리어 옵션을 표시합니다.</p>}
-                                {selectedSection === '인테리어' && <p>여기에 인테리어 옵션을 표시합니다.</p>}
-                                {selectedSection === '선택완료' && <p>선택한 모든 옵션을 확인하고 견적을 완료합니다.</p>}
+                                {ConfigurationContainer &&
+                                    <ConfigurationContainer selectedSection={sections[selectedSectionIndex]}/>}
                             </div>
                         </div>
-                        <div className={'btn-wrap flex-center'}>
-                            {selectedSectionIndex < sections.length - 1 ? (
-                                <>
-                                    <Button title={'이전'} className={'btn-primary'} onClick={handleClickPrev}/>
-                                    <Button title={'다음'} className={'btn-primary'} onClick={handleClickNext}/>
-                                </>
-                            ) : (
-                                <>
-                                    <Button title={'저장하기'} className={'btn-primary'}/>
-                                    <Button title={'시승신청'} className={'btn-primary'}/>
-                                </>
-                            )}
-                        </div>
+                        <ModelConfigButton
+                            onPrev={handleClickPrev}
+                            onNext={handleClickNext}
+                            isFinalStep={selectedSectionIndex === sections.length - 1}
+                        />
                     </section>
                 </div>
             </main>

@@ -1,11 +1,25 @@
 @use 'src/scss/variables';
 
-// Button
-.btn-wrap {
-  width: 290px;
+.btn-wrap,
+.config_btn_wrap {
   margin: 0 auto;
 }
 
+// Button Wrapper
+.btn-wrap {
+  width: 290px;
+}
+
+// Model Config Button Wrapper
+.config_btn_wrap {
+  width: 305px;
+
+  .config_btn {
+    width: 150px;
+  }
+}
+
+// Primary Button Style
 .btn-primary {
   display: inline-block;
   padding: 15px 30px;

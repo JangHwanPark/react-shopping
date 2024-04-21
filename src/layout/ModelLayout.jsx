@@ -1,7 +1,7 @@
 import React from 'react';
 import models from "../data/models.json";
 import ImageBlock from "../components/Image/ImageBlock";
-import NavigationalTabs from "../components/NavigationalTabs/NavigationalTabs";
+import NavigationalTabs from "../components/TabComponents/NavigationalTabs";
 
 export default function ModelLayout({ title, items, currentTab, setCurrentTab, children }) {
     // models 배열과 currentTab 값이 유효한지 확인
