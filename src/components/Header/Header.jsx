@@ -23,6 +23,9 @@ export default function Header() {
                                 <Link to={`/models/${models[currentTab].name}`}>MODEL</Link>
                             </li>
                             <li className={'item'}>
+                                <Link to={`/model/${models[currentTab].name}/model-configuration`}>내 차 만들기</Link>
+                            </li>
+                            <li className={'item'}>
                                 <Link to={`/test-drive/${models[currentTab].name}`}>시승신청</Link>
                             </li>
                             <li className={'item'}>
@@ -35,9 +38,9 @@ export default function Header() {
                                     MY ACCOUNT
                                 </Link>
                             </li>
-                            <li className={'item'}>
+                            {/*<li className={'item'}>
                                 <Link to="/login">{user ? "LOGOUT" : "LOGIN"}</Link>
-                            </li>
+                            </li>*/}
                             <li className={'item'}>
                                 <button onClick={handleSignOut}>
                                     LOGOUT

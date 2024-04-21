@@ -1,11 +1,9 @@
 import React from 'react';
+import {useColorSelector} from "../../hooks/useElementSelector";
 
 export default function ColorList({...rest}) {
-    const {title, colorList, currentColor, setCurrentColor} = rest
-
-    const handleChangeColor = (itemColor) => {
-        setCurrentColor(itemColor);
-    }
+    const {title, colorList} = rest
+    const [currentColor, handleColorChange] = useColorSelector(colorList[0].color);
 
     return (
         <div className="top_wrapper">
@@ -23,7 +21,7 @@ export default function ColorList({...rest}) {
                         <button
                             style={{backgroundColor: item.rgb}}
                             className={`color_button ${item.color === currentColor ? 'active' : ''}`}
-                            onClick={() => handleChangeColor(item.color)}
+                            onClick={() => handleColorChange(item.color)}
                         >
                         </button>
                     </li>
