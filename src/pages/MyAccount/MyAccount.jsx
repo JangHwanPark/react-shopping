@@ -1,6 +1,6 @@
 import React from 'react';
 import {useAuth} from "../../context/AuthContext";
-import SectionLayout from "../../components/SectionLayout/SectionLayout";
+import SectionLayout from "../../layout/SectionLayout";
 import UnorderedList from "../../components/UnorderedList/UnorderedList";
 import AccountLayout from "../../layout/AccountLayout";
 import useAuthRedirect from "../../hooks/useAuthRedirect";

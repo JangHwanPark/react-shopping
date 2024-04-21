@@ -16,6 +16,11 @@
   align-items: center;
   border-right:  1px solid variables.$neutral-color;
 
+  span:first-child {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
   span {
     padding: 0.5rem 0;
     font-size: 1.25rem;

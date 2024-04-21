@@ -12,8 +12,10 @@ import Button from "../../components/Button/Button";
 import Select from "../../components/Select/Select";
 import ModelLayout from "../../layout/ModelLayout";
 import models from "../../data/models.json";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function TestDrive() {
+    const navigate = useNavigate();
     const {currentTab, setCurrentTab} = useTab();
 
     // 현재 연도와 선택한 월에따라 일을 계산하여 월, 일을 반환하는 커스텀 훅
@@ -24,9 +26,6 @@ export default function TestDrive() {
 
     // 선택된 쇼룸의 이름을 상태로 관리
     const [selectedShowroom, setSelectedShowroom] = useState('');
-
-    // DebugLog
-    console.log('TestDrive: ', models[currentTab]);
 
     return (
         <ModelLayout
@@ -99,8 +98,12 @@ export default function TestDrive() {
                                 />
                                 <div className={'btn-wrap'}>
                                     <div className={'flex-space-around'}>
-                                        <Button className={'btn-primary'} title={'돌아가기'}/>
-                                        <Button className={'btn-primary'} title={'신청하기'}/>
+                                        <Link to={'/'} className={'btn-primary'}>돌아가기</Link>
+                                        <Button
+                                            className={'btn-primary'}
+                                            title={'신청하기'}
+                                            onClick={() => alert('준비중 입니다.')}
+                                        />
                                     </div>
                                 </div>
                             </div>

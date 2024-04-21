@@ -5,12 +5,21 @@ import {useTab} from "../../context/TabContext";
 
 // import Components
 import ProductInformation from "../../components/ProductsInformation/ProductInformation";
-import Button from "../../components/Button/Button";
 import ModelLayout from "../../layout/ModelLayout";
+import Title from "../../components/Title/Title";
+
+const fieldMappings = {
+    type: '차종',
+    engineType: '엔진 타입',
+    fuelType: '연료 타입',
+    maxPowerHP: '최대 출력(HP)',
+    basePrice: '기본 가격',
+    MPGe: '연비(MPGe)'
+};
 
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
-
+    console.log(models[currentTab]);
     return (
         <ModelLayout
             title={'구매 차량 선택'}
@@ -38,7 +47,7 @@ export default function Models() {
                         {/* 전달받은 value 를 span 태그로 감싸서 출력 */}
                         {(key, value) => (
                             <>
-                                <span>{key}</span>
+                                <span>{fieldMappings[key] || key}</span>
                                 <span><strong>{value}</strong></span>
                             </>
                         )}
@@ -53,7 +62,7 @@ export default function Models() {
                             <strong>내차 만들기</strong>
                         </Link>
                         <Link
-                            to={'/test-drive'}
+                            to={`/test-drive/${models[currentTab].name}`}
                             className={'btn-primary'}
                         >
                             <strong>시승신청</strong>
@@ -62,11 +71,10 @@ export default function Models() {
                 </section>
             </div>
 
-            {/* Bottom Section */}
+            {/* (Bottom) interior, exterior img Section */}
             <section className={'model_design flex-column'}>
                 <div className={'flex-center'}>
-                    <Button title={'Interior'} className={'btn-primary'}/>
-                    <Button title={'exterior'} className={'btn-primary'}/>
+                    <Title titleText={'Interior & Exterior'}/>
                 </div>
                 <ProductInformation
                     currentTab={currentTab}
