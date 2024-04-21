@@ -10,7 +10,7 @@ export default function AccountLayout({ user, children }) {
     ];
 
     return (
-        <div className="pg_container">
+        <div className="pg_container flex-column">
             {/* Top */}
             <Title titleText={'MY ACCOUNT'}/>
             {/* Todo: MY ACCOUNT 하단에 배치 (h2) */}

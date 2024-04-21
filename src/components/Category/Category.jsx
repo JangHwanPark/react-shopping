@@ -15,7 +15,7 @@ export default function Category({categories, className}) {
                         <NavLink
                             className={({isActive}) => isActive ? 'active' : ''}
                             to={category.path}>
-                            {category.name}
+                            <h2>{category.name}</h2>
                         </NavLink>
                     </li>
                 ))}

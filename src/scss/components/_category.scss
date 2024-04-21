@@ -5,36 +5,29 @@
   width: 768px;
   margin: 0 auto;
   border-bottom: 1px solid variables.$main-color;
-  position: relative; // 상대적 위치 설정
+  position: relative;
 
   ul {
     width: 100%;
     margin: 3rem 0 0 0;
 
     li, a {
-      width: 100%;
-      padding: 24px 0;
-      font-size: 1.5rem;
       font-weight: 600;
       flex: 1;
       text-align: center;
     }
   }
 
-  .active {
-    color: red;
+  .active, .active-link {
+    color: variables.$sub-color-dark;
     font-weight: bold;
 
     &:after {
       width: 250px;
-      height: 4px; // 선의 두께
-      content: ''; // 의사 요소에 내용 없음
-      display: block; // 블록 레벨 요소로 만들어 줌
-      position: absolute; // 절대 위치
-      left: 0; // 왼쪽 정렬
-      right: 0; // 오른쪽 정렬
-      bottom: -3px; // 텍스트 아래로 10px 떨어짐
-      background-color: red; // 선의 색상
+      height: 4px;
+      content: '';
+      display: block;
+      background-color: variables.$sub-color-dark;
     }
   }
 }
