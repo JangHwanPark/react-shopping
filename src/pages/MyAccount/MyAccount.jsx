@@ -1,18 +1,13 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useAuth} from "../../context/AuthContext";
-import {useNavigate} from "react-router-dom";
 import SectionLayout from "../../components/SectionLayout/SectionLayout";
 import UnorderedList from "../../components/UnorderedList/UnorderedList";
 import AccountLayout from "../../layout/AccountLayout";
+import UseAuthRedirect from "../../hooks/useAuthRedirect";
 
 export default function MyAccount() {
     const {user} = useAuth();
-    const navigate = useNavigate();
-
-    // 로그인이 되어 있지 않다면 로그인 페이지로 이동
-    useEffect(() => {
-        if (!user) navigate("/login");
-    }, [user, navigate]);
+    UseAuthRedirect(user)
 
     // 필요한 사용자 정보만 추출
     const userDetails = user ? {
