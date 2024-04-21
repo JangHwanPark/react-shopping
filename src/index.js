@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             {path: '/user/account/:userId/my-car', element: <MyCar/>},
             {path: '/user/account/:userId/saved-models', element: <SavedModels/>},
             {path: '/login', element: <Authentication/>},
-            {path: '/test', element: <TestPage/>},
+            {path: '/test-page', element: <TestPage/>},
         ]
     }
 ])
