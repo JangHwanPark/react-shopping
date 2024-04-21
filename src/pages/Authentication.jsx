@@ -1,5 +1,4 @@
 import React from 'react';
-import {useAuth} from "../context/AuthContext";
 import {handleGoogleLogin} from "../utils/fbInstance";
 import Input from "../components/Input/Input";
 import {Link, useNavigate} from "react-router-dom";
@@ -14,12 +13,12 @@ export default function Authentication() {
     }
 
     return (
-        <div className={'login_container container'}>
+        <div className={'login_container'}>
             <div className={'login_wrap inner_wrap'}>
                 <main className={'main_login flex-center'}>
                     <section className={'section_form flex-center'}>
                         {/* Login Form */}
-                        <form className={'form_login'}>
+                        <form className={'form_login flex-column'}>
                             <h2>USE YOUR EMAIL ADDRESS OR PHONE NUMBER</h2>
                             <Input
                                 id={'username_input'}
@@ -46,7 +45,7 @@ export default function Authentication() {
                             <Button title={'구글 로그인'} className={'btn-primary'} onClick={handleLogin}/>
                         </section>
                     </section>
-                    <div className={'flex-space-around'}>
+                    <div className={'help_wrap'}>
                         <Link to={'./login'}>비밀번호를 잊으셨나요?</Link>
                         <Link to={'./login'}>계정 생성</Link>
                         <Link to="/support">문의하기</Link>

@@ -12,10 +12,9 @@ import Button from "../../components/Button/Button";
 import Select from "../../components/Select/Select";
 import ModelLayout from "../../layout/ModelLayout";
 import models from "../../data/models.json";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export default function TestDrive() {
-    const navigate = useNavigate();
     const {currentTab, setCurrentTab} = useTab();
 
     // 현재 연도와 선택한 월에따라 일을 계산하여 월, 일을 반환하는 커스텀 훅
@@ -33,7 +32,8 @@ export default function TestDrive() {
             items={models.map(model => ({
                 name: model.name,
                 path: `/test-drive/${model.name}`,
-            }))}            currentTab={currentTab}
+            }))}
+            currentTab={currentTab}
             setCurrentTab={setCurrentTab}
         >
 
@@ -49,7 +49,8 @@ export default function TestDrive() {
                                 <Select
                                     id="test_drive_show_rooms"
                                     className="select_show_rooms"
-                                    value={selectedShowroom}
+                                    value={''}
+                                    defaultOption="전시장을 선택해 주세요"
                                     onChange={(e) => setSelectedShowroom(e.target.value)}
                                     options={showRooms.map(({name, address}) => (
                                         {value: address, label: name}
@@ -61,13 +62,14 @@ export default function TestDrive() {
                         {/* input user info */}
                         <section className={'section_info'}>
                             <h2 className={'cont-title'}>개인정보 입력</h2>
-                            <div className={'info_wrap flex-column'}>
+                            <form className={'info_wrap flex-column'}>
                                 <div className={'date_picker flex'}>
                                     <h3>시승 날짜 선택</h3>
                                     <Select
                                         id="test_drive_month"
                                         className="select_month"
                                         value={String(month)}
+                                        defaultOption="시승월을 선택해주세요"
                                         onChange={(e) => setMonth(Number(e.target.value))}
                                         options={months.map(({value, label}) => ({value, label}))}
                                     />
@@ -75,6 +77,7 @@ export default function TestDrive() {
                                         id="test_drive_day"
                                         className="select_day"
                                         value={selectedDay}
+                                        defaultOption="시승일을 선택해주세요"
                                         onChange={(e) => setSelectedDay(e.target.value)}
                                         options={days.map(day => ({value: day, label: day}))}
                                         addDaySuffix={true}
@@ -106,7 +109,7 @@ export default function TestDrive() {
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </section>
                     </div>
                 </div>
