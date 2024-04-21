@@ -14,12 +14,18 @@ export default function Models() {
     return (
         <ModelLayout
             title={'구매 차량 선택'}
+            items={models.map(model => ({
+                name: model.name,
+                path: `/models/${model.name}`,
+            }))}
             currentTab={currentTab}
             setCurrentTab={setCurrentTab}
         >
+
             {/* Middle Section */}
             <div className={'flex-center'}>
                 <section className={'model_info'}>
+
                     {/* Model info Table */}
                     <ProductInformation
                         className={'info_wrapper flex-center'}
@@ -37,7 +43,7 @@ export default function Models() {
                             </>
                         )}
                     </ProductInformation>
-                    
+
                     {/* Link button */}
                     <div className={`link_wrap flex`}>
                         <Link

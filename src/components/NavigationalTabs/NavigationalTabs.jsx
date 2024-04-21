@@ -24,6 +24,7 @@ export default function NavigationalTabs({ title, items, className, onTabSelect,
 
     return (
         <section className={`${className} category`}>
+            {/* 페이지 상단 제목 */}
             <Title titleText={title}/>
 
             {/* 카테고리 */}

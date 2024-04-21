@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useAuth} from "../../context/AuthContext";
 import AccountLayout from "../../layout/AccountLayout";
 import SectionLayout from "../../components/SectionLayout/SectionLayout";

@@ -25,17 +25,24 @@ export default function TestDrive() {
     // 선택된 쇼룸의 이름을 상태로 관리
     const [selectedShowroom, setSelectedShowroom] = useState('');
 
+    // DebugLog
     console.log('TestDrive: ', models[currentTab]);
+
     return (
         <ModelLayout
             title={'시승 차량 선택'}
-            currentTab={currentTab}
+            items={models.map(model => ({
+                name: model.name,
+                path: `/test-drive/${model.name}`,
+            }))}            currentTab={currentTab}
             setCurrentTab={setCurrentTab}
         >
+
             {/* glb 의 inner_wrap 적용됨*/}
             <form action="" className={'test_drive_form inner_wrap'}>
                 <div className={'contents_wrap cont_center'}>
                     <div className={'cont_main'}>
+
                         {/* select showroom*/}
                         <section className={'showroom_section'}>
                             <h2 className={'cont-title'}>전시장 선택</h2>
