@@ -3,10 +3,14 @@ import React from 'react';
 // 모델 및 등급 섹션 컴포넌트
 export function ModelGradeSection() {
     return (
-        <div>
+        <div className={'model_grade'}>
             {/* 여기에 '모델 및 등급' 관련 내용을 구현합니다 */}
             <h2>모델 및 등급</h2>
             {/* 해당 섹션의 내용 */}
+            <ul>
+                <li>EXECUTIVE</li>
+                <li>LUXURY +</li>
+            </ul>
         </div>
     );
 }
@@ -14,9 +18,8 @@ export function ModelGradeSection() {
 // 익스테리어 섹션 컴포넌트
 export function ExteriorSection() {
     return (
-        <div>
-            {/* 여기에 '익스테리어' 관련 내용을 구현합니다 */}
-            <h2>익스테리어</h2>
+        <div className={'model_exterior'}>
+            <h2>익스테리어 색상</h2>
             {/* 해당 섹션의 내용 */}
         </div>
     );
@@ -25,9 +28,8 @@ export function ExteriorSection() {
 // 인테리어 섹션 컴포넌트
 export function InteriorSection() {
     return (
-        <div>
-            {/* 여기에 '인테리어' 관련 내용을 구현합니다 */}
-            <h2>인테리어</h2>
+        <div className={'model_interior'}>
+            <h2>인테리어 색상</h2>
             {/* 해당 섹션의 내용 */}
         </div>
     );
@@ -36,8 +38,7 @@ export function InteriorSection() {
 // 선택완료 섹션 컴포넌트
 export function FinalizeSection() {
     return (
-        <div>
-            {/* 여기에 '선택완료' 관련 내용을 구현합니다 */}
+        <div className={'model_finalize'}>
             <h2>선택완료</h2>
             {/* 해당 섹션의 내용 */}
         </div>
@@ -55,8 +56,8 @@ const ModelSections = {
 export default function ConfigurationContainer({ selectedSection }) {
     const SectionComponent = ModelSections[selectedSection];
     return (
-        <div>
+        <>
             {SectionComponent ? <SectionComponent /> : <p>섹션이 선택되지 않았습니다.</p>}
-        </div>
+        </>
     );
 }
