@@ -1,0 +1,34 @@
+@use 'src/scss/variables';
+
+// MyAccount Category Design
+.category {
+  width: 968px;
+  margin: 0 auto;
+  border-bottom: 1px solid variables.$main-color;
+  position: relative;
+
+  ul {
+    width: 100%;
+    margin: 3rem 0 0 0;
+
+    li, a {
+      font-weight: 600;
+      font-size: 1.4rem;
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  .active, .active-link {
+    color: variables.$sub-color-dark;
+    font-weight: bold;
+
+    &:after {
+      width: 250px;
+      height: 4px;
+      content: '';
+      display: block;
+      background-color: variables.$sub-color-dark;
+    }
+  }
+}

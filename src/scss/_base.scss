@@ -1,8 +1,11 @@
 // 도메인 전체적으로 사용될 폰트나 기본 스타일
-body {
-  width: 100%;
-  height: 100vw;
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+body {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -15,11 +18,7 @@ body {
 #root {
   width: 100%;
   height: 100%;
-}
 
-.container {
-  width: 100%;
-  height: 100%;
 }
 
 .contents {
@@ -41,17 +40,27 @@ code {
   monospace;
 }
 
+// list
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+// Link, NavLink (a)
 a {
   color: #333;
   text-decoration: none;
 }
 
+//
 figure {
   margin: 0;
+}
+
+// Button
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }

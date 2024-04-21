@@ -1,0 +1,57 @@
+@use "src/scss/variables";
+
+.welcome_member {
+  width: 458px;
+  margin: 0 auto;
+}
+
+// Main Contents
+.main_account {
+  width: 768px;
+  margin: 0 auto;
+}
+
+.section_account {
+
+  h2 {
+    margin-top: 5rem;
+  }
+}
+
+// SectionLayout.scss
+.section_account {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+
+  h2 {
+    font-size: 1.25rem;
+    color: variables.$main-color;
+    margin-bottom: 15px;
+  }
+
+  .account-details {
+    li {
+      list-style-type: none;
+      padding: 8px 0;
+      border-bottom: 1px solid variables.$main-color;
+      color: variables.$main-color;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .address {
+    font-style: italic;
+    line-height: 1.6;
+    color: variables.$main-color;
+  }
+}
+
+// MyCar.jsx
+.not_registered {
+  width: 300px;
+  margin-right: auto;
+}

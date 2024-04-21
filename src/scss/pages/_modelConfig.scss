@@ -1,0 +1,88 @@
+@use "src/scss/variables";
+
+// ModelConfiguration Component
+.model_config_container {
+  height: 1000px;
+}
+
+.model_config_wrapper {
+  height: 100vh;
+}
+
+
+// main
+.model_config {
+  height: 100%;
+  margin: 0 5rem;
+}
+
+
+// title
+.model_title_wrap {
+  margin: 0 2.5rem;
+  align-items: center;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+
+// section
+.section_menu,
+.section_model {
+  width: 100%;
+}
+
+.section_menu {
+  padding-top: 6rem;
+}
+
+
+// Selected Model Tab Menu
+.tab_header_wrap {
+  height: 3rem;
+  margin: 3rem 0;
+  gap: 1rem;
+
+  button {
+    font-size: 1.25rem;
+  }
+}
+
+
+// Selected model Option
+.selected_model_display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+
+  .section_model img {
+    width: 768px;
+  }
+
+  .config_info {
+    justify-content: center;
+  }
+}
+
+// Select Model info
+.config_info {
+  width: 100%;
+  gap: 5rem;
+}
+
+.config_info,
+.configuration_content {
+  margin: 0 auto;
+}
+
+.model_finalize {
+  align-items: flex-start;
+}

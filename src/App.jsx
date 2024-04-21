@@ -7,11 +7,13 @@ import Footer from "./components/Footer/Footer";
 function App() {
     return (
         <AuthProvider>
-            <TabProvider>
-                <Header/>
-                <Outlet/>
-            </TabProvider>
-            <Footer/>
+            <div className="page_container">
+                <TabProvider>
+                    <Header/>
+                    <Outlet/>
+                </TabProvider>
+                <Footer/>
+            </div>
         </AuthProvider>
     );
 }

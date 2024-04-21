@@ -1,27 +1,27 @@
-@use 'src/scss/variables';
+@use '../variables';
 
 // 제품 카드 전체에 적용될 스타일
-.productCard {
+.product_card_container {
   width: 100%;
   margin: 1rem 0;
 }
 
 // 제품 카드 아이템
-.productItem {
+.product_item {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 // 제품 정보 래퍼 클래스
-.productInfoWrapper {
+.product_info_wrap {
   width: 300px;
   height: 200px;
   margin-top: 4rem;
 }
 
 // 제품 이름과 가격 정보에 적용될 스타일
-.productInfo {
+.product_info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@
 }
 
 // 이미지 컨테이너 스타일
-.productImage {
+.product_image {
 
   // 이미지
   img {
@@ -49,7 +49,7 @@
 }
 
 // 하이퍼링크 컨테이너 스타일
-.productActions {
+.product_actions {
   display: flex;
   justify-content: center;
   gap: 10px;

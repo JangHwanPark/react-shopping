@@ -5,16 +5,26 @@
 // Components
 @use "src/scss/components/button";
 @use "src/scss/components/CarouselSlide";
+@use "components/navigationalTabs";
 @use "src/scss/components/input";
+@use "src/scss/components/Models";
+@use "src/scss/components/MyCarColor";
+@use "src/scss/components/productsCard";
 @use "src/scss/components/select";
-@use "src/scss/components/TabView";
 @use "src/scss/components/title";
 
 // Layout
 @use "src/scss/layout/flex";
 @use "src/scss/layout/header";
 @use "src/scss/layout/footer";
+@use "src/scss/layout/modelLayout";
 
 // Page
-@use "pages/Models";
-@use "src/scss/pages/TestDrive";
+@use "pages/account";
+@use "pages/home";
+@use "pages/login";
+@use "pages/lounge";
+@use "pages/models";
+@use "pages/modelConfig";
+@use "pages/notFound";
+@use "pages/testDrive";

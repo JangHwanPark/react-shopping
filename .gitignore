@@ -34,8 +34,8 @@ yarn-error.log*
 /src/components/ProductsInformation/ProductInformation.module.css
 /src/components/ProductsInformation/ProductInformation.module.css.map
 /src/components/ProductsInformation/.sass-cache/7eeb275c7d745e8cb6ba5c8e331908fe750baa89/ProductInformation.module.scssc
-/src/components/ProductsCard/ProductsCard.module.css
-/src/components/ProductsCard/ProductsCard.module.css.map
+/src/scss/components/_productsCard.css
+/src/scss/components/_productsCard.css.map
 /src/components/ProductsCard/.sass-cache/2dabffd9c41c2ae8320bec7b89fcc439bfa4f284/ProductsCard.module.scssc
 /src/components/ProductsCard/.sass-cache/6d9fd644ebb6e9f930b0f867e60f33cafbfe2840/ProductsCard.module.scssc
 /.idea/inspectionProfiles/Project_Default.xml

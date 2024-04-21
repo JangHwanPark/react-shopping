@@ -1,16 +1,4 @@
 @use "src/scss/variables";
-
-.models_container {
-  // width: 100%;
-  margin-top: 5rem;
-  padding: 3rem;
-}
-
-// image
-.selected_model_img {
-  text-align: center;
-}
-
 // model info
 .info_list {
   width: 100%;
@@ -27,6 +15,11 @@
   justify-content: space-between;
   align-items: center;
   border-right:  1px solid variables.$neutral-color;
+
+  span:first-child {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
 
   span {
     padding: 0.5rem 0;
