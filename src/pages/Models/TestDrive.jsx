@@ -9,7 +9,7 @@ import {useTab} from "../../context/TabContext";
 // import Components
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
-import Select from "../../components/Select/Select";
+import SelectMenu from "../../components/Select/SelectMenu";
 import ModelLayout from "../../layout/ModelLayout";
 import models from "../../data/models.json";
 import {Link} from "react-router-dom";
@@ -47,7 +47,7 @@ export default function TestDrive() {
                         <section className={'showroom_section'}>
                             <h2 className={'cont-title'}>전시장 선택</h2>
                             <div className={'select_wrap'}>
-                                <Select
+                                <SelectMenu
                                     id="test_drive_show_rooms"
                                     className="select_show_rooms"
                                     value={''}
@@ -66,7 +66,7 @@ export default function TestDrive() {
                             <form className={'info_wrap flex-column'}>
                                 <div className={'date_picker flex'}>
                                     <h3>시승 날짜 선택</h3>
-                                    <Select
+                                    <SelectMenu
                                         id="test_drive_month"
                                         className="select_month"
                                         value={String(month)}
@@ -74,7 +74,7 @@ export default function TestDrive() {
                                         onChange={(e) => setMonth(Number(e.target.value))}
                                         options={months.map(({value, label}) => ({value, label}))}
                                     />
-                                    <Select
+                                    <SelectMenu
                                         id="test_drive_day"
                                         className="select_day"
                                         value={selectedDay}

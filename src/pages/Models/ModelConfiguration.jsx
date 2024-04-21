@@ -1,16 +1,19 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useTab} from "../../context/TabContext";
 import ImageBlock from "../../components/Image/ImageBlock";
 import models from "../../data/models.json";
 import ProductInformation from "../../components/ProductsInformation/ProductInformation";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import StatefulTab from "../../components/TabComponents/StatefulTab";
 import ModelConfigButton from "../../components/Button/ModelConfigButton";
 import ConfigurationContainer from "../../components/TabComponents/ModelSections";
+import SelectMenu from "../../components/Select/SelectMenu";
 
 export default function ModelConfiguration() {
+    const navigate = useNavigate();
     const {modelId} = useParams();
     const {currentTab, setCurrentTab} = useTab();
+    const [selectedModel, setSelectedModel] = useState(modelId); // 초기 상태를 useParams로 설정
 
     // 각 섹션의 현재 선택 상태를 관리하는 상태 변수
     const sections = ['모델 및 등급', '익스테리어', '인테리어', '선택완료'];
@@ -39,6 +42,28 @@ export default function ModelConfiguration() {
         }
     }
 
+    // 모델 변경에 따라 처리할 로직
+    useEffect(() => {
+        // 모델 ID에 따라 필요한 데이터를 불러오거나 상태를 업데이트
+        setSelectedModel(modelId);
+    }, [modelId]);
+
+    // 셀렉트 메뉴에서 모델 변경 처리
+    const handleModelChange = (newModelId) => {
+        setSelectedModel(newModelId);
+        updateCurrentTab(newModelId)
+        navigate(`/model/${newModelId}/model-configuration`); // 새로운 모델 ID로 라우트 변경
+    };
+
+    // 모델 ID에 따라 탭 인덱스를 업데이트
+    const updateCurrentTab = (modelId) => {
+        const tabIndex = models.findIndex(model => model.name === modelId);
+        console.log(tabIndex, modelId)
+        if (tabIndex !== -1) setCurrentTab(tabIndex);
+    };
+
+    console.log('ModelConfiguration test: ', selectedModel)
+    console.log('ModelConfiguration currentTab: ', currentTab)
     return (
         <div className={'model_config_container'}>
             <main className={'model_config flex-column'}>
@@ -49,6 +74,14 @@ export default function ModelConfiguration() {
                         <h1>{modelId}</h1>
                         <p>나의 취향에 따라 옵션을 선택하고, 예상 견적을 확인하세요.</p>
                     </div>
+                    <SelectMenu
+                        id="test_drive_show_rooms1"
+                        className="select_show_rooms"
+                        options={models.map(({name, address}) => (
+                            {value: address, label: name}
+                        ))}
+                        onChange={(e) => handleModelChange(e.target.value)}
+                    />
                     <ProductInformation
                         className={'info_wrapper flex-center'}
                         ulClassName={'info_list flex'}

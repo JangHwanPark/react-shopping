@@ -19,6 +19,8 @@ const fieldMappings = {
 
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
+
+    // DebugLog
     console.log(models[currentTab]);
     return (
         <ModelLayout
