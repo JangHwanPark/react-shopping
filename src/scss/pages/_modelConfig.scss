@@ -1,5 +1,9 @@
 @use "src/scss/variables";
 
+.model_config_wrapper {
+  height: 100vh;
+}
+
 // main
 .model_config {
   height: 100%;
@@ -33,4 +37,18 @@
 
 .section_model {
   padding: 6rem 0;
+}
+
+// Selected model
+.selected_model_display {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .section_model img {
+    width: 768px;
+  }
+
+  .config_info {
+    justify-content: center;
+  }
 }
