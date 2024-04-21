@@ -16,6 +16,16 @@ export default function ModelConfiguration() {
     const sections = ['모델 및 등급', '익스테리어', '인테리어', '선택완료'];
     const [selectedSectionIndex, setSelectedSectionIndex] = useState(0);
 
+    // 사용자 정의 모델 상태 저장
+    const [modelGrade, setModelGrade] = useState('');
+    const [selectedExterior, setSelectedExterior] = useState('');
+    const [selectedInterior, setSelectedInterior] = useState('');
+    const [estimatedPrice, setEstimatedPrice] = useState(models[currentTab].basePrice);
+
+    const handleModelGradeChange = (grade) => setModelGrade(grade);
+    const handleExteriorChange = (color) => setSelectedExterior(color);
+    const handleInteriorChange = (color) => setSelectedInterior(color);
+
     // 다음 or 이전 탭으로 이동
     const handleClickNext = () => {
         if (selectedSectionIndex < sections.length - 1) {
@@ -32,7 +42,7 @@ export default function ModelConfiguration() {
     return (
         <div className={'model_config_container'}>
             <main className={'model_config flex-column'}>
-                {/* Top */}
+                {/* Top Menu */}
                 <section className={'section_menu'}>
                     <div className={'model_title_wrap flex-space-between'}>
                         {/* Select Menu 로 변경 예정 */}
@@ -67,8 +77,8 @@ export default function ModelConfiguration() {
                     </div>
                 </section>
 
+                {/* Select Model Image */}
                 <div className={'selected_model_display'}>
-                    {/* Select Model Image */}
                     <section className={'section_model'}>
                         <ImageBlock
                             className={'selected_model_img'}
@@ -82,8 +92,21 @@ export default function ModelConfiguration() {
                         {/* 선택된 섹션에 해당하는 컴포넌트를 렌더링 */}
                         <div className={'configuration_content'}>
                             {ConfigurationContainer &&
-                                <ConfigurationContainer selectedSection={sections[selectedSectionIndex]}/>}
+                                <ConfigurationContainer
+                                    modelId={modelId}
+                                    selectedSection={sections[selectedSectionIndex]}
+                                    selectedExterior={selectedExterior}
+                                    selectedInterior={selectedInterior}
+                                    modelGrade={modelGrade}
+                                    estimatedPrice={estimatedPrice}
+                                    onModelGradeChange={handleModelGradeChange}
+                                    onExteriorChange={handleExteriorChange}
+                                    onInteriorChange={handleInteriorChange}
+                                />
+
+                            }
                         </div>
+
                         {/* Button */}
                         <ModelConfigButton
                             onPrev={handleClickPrev}

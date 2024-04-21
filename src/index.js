@@ -14,6 +14,7 @@ import TestDrive from "./pages/Models/TestDrive";
 import Authentication from "./pages/Authentication";
 import SavedModels from "./pages/MyAccount/SavedModels";
 import MyCar from "./pages/MyAccount/MyCar";
+import TestPage from "./pages/TestPage";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
             {path: '/user/account/:userId/my-car', element: <MyCar/>},
             {path: '/user/account/:userId/saved-models', element: <SavedModels/>},
             {path: '/login', element: <Authentication/>},
+            {path: '/test', element: <TestPage/>},
         ]
     }
 ])

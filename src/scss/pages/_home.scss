@@ -8,3 +8,20 @@
   height: 100%;
   margin: 0 2.5rem
 }
+
+// Select Models Tap
+.models_tap {
+  max-width: 820px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 4rem;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .select_model_type button {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+  }
+}
