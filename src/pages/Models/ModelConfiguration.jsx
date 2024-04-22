@@ -10,7 +10,7 @@ import useModelSettings from "../../hooks/useModelSettings";
 import useSectionNavigation from "../../hooks/useSectionNavigation";
 import useModelTab from "../../hooks/useModelTab";
 import {useParams} from "react-router-dom";
-import {fieldMappings} from "../../data/my_car";
+import {fieldMappings, SECTIONS} from "../../data/my_car";
 
 export default function ModelConfiguration() {
     const { modelId } = useParams();
@@ -33,8 +33,6 @@ export default function ModelConfiguration() {
         estimatedPrice,
         setEstimatedPrice
     } = useModelSettings(models[currentTab]?.basePrice || 0);
-
-    const sections = ['모델 및 등급', '익스테리어', '인테리어', '선택완료'];
 
     return (
         <div className={'model_config_container'}>
@@ -71,7 +69,7 @@ export default function ModelConfiguration() {
                         )}
                     </ProductInformation>
                     <div className={'tab_header_wrap flex-center'}>
-                        {sections.map((sectionName, index) => (
+                        {SECTIONS.map((sectionName, index) => (
                             <StatefulTab
                                 key={index}
                                 title={sectionName}
@@ -99,7 +97,7 @@ export default function ModelConfiguration() {
                             {ConfigurationContainer &&
                                 <ConfigurationContainer
                                     modelId={modelId}
-                                    selectedSection={sections[selectedSectionIndex]}
+                                    selectedSection={SECTIONS[selectedSectionIndex]}
                                     modelGrade={modelGrade}
                                     estimatedPrice={estimatedPrice}
                                     onModelGradeChange={setModelGrade}
@@ -111,7 +109,7 @@ export default function ModelConfiguration() {
                         <ModelConfigButton
                             onPrev={prevSection}
                             onNext={nextSection}
-                            isFinalStep={selectedSectionIndex === sections.length - 1}
+                            isFinalStep={selectedSectionIndex === SECTIONS.length - 1}
                         />
                     </section>
                 </div>

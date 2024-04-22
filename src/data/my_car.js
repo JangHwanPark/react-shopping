@@ -25,3 +25,5 @@ export const fieldMappings = {
     basePrice: '기본 가격',
     MPGe: '연비(MPGe)'
 };
+
+export const SECTIONS = ['모델 및 등급', '익스테리어', '인테리어', '선택완료'];
