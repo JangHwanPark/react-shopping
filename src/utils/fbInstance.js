@@ -4,7 +4,7 @@ import { initializeApp } from 'firebase/app';
 import {getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged} from 'firebase/auth';
 
 // 데이터베이스 연동
-import {getDatabase, get, child, ref} from "firebase/database";
+import {getDatabase, get, child, ref, set} from "firebase/database";
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -59,3 +59,21 @@ const adminUser = async (user) => {
             }
         })
 }
+
+/**
+ * Firebase 데이터베이스에 데이터를 저장하는 범용 함수
+ * @param {Object} data - 저장할 데이터
+ * @param {string} path - 데이터베이스 내 저장할 경로
+ */
+export const saveData = async (data, path) => {
+    const database = getDatabase(app); // 데이터베이스 인스턴스 생성
+
+    try {
+        const dataRef = ref(database, path); // 데이터 저장 경로 설정
+        await set(dataRef, data);
+        console.log('Data saved at path:', path, 'Data:', data);
+    } catch (error) {
+        console.error('Error saving data at path:', path, ':', error);
+        throw error; // 에러를 다시 throw하여 호출자에게 에러 정보를 전달
+    }
+};

@@ -7,11 +7,6 @@ export default function ModelLayout({ title, items, currentTab, setCurrentTab, c
     // models 배열과 currentTab 값이 유효한지 확인
     if (!models || !models[currentTab]) return <div>Loading or no model data available...</div>;
 
-    // DebugLog
-    console.log(currentTab)
-    console.log(models)
-    console.log(items)
-
     return (
         <main className={'models_container flex-column'}>
             {/* Top */}

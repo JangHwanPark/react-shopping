@@ -8,20 +8,33 @@ import React from 'react';
  * @param {Array} options - 선택 가능한 옵션 배열. 각 옵션은 {value, label} 형태
  * @param {string} defaultOption - 선택 전에 표시될 기본 옵션의 레이블
  * @param {Object} rest - 추가적으로 전달될 프로퍼티를 포함하는 객체, 조건부 렌더링 가능
+ *
+ * 사용 예:
+ * <SelectMenu
+ *     className="select_show_rooms"
+ *     value={selectedShowroom}
+ *     onChange={(e) => setSelectedShowroom(e.target.value)}
+ *     options={showRooms.map(({name, address}) => ({
+ *         value: address,
+ *         label: name
+ *     }))}
+ *     defaultOption="전시장을 선택해 주세요"
+ *     addDaySuffix={false}
+ * />
  */
-export default function Select({ className, value, onChange, options, defaultOption, ...rest }) {
+export default function SelectMenu({className, options, name, value, onChange, defaultOption, addDaySuffix}) {
     return (
-        <select className={className} value={value} onChange={onChange}>
+        <select className={className} value={value} name={name} onChange={onChange}>
             {/* defaultOption 이 제공되면, 사용자가 다른 옵션을 선택하기 전에 표시할 기본 옵션을 추가 */}
             {defaultOption && (
-                <option value="">{defaultOption}</option>
+                <option value="" >{defaultOption}</option>
             )}
 
             {/* options 배열을 순회하여, 각 옵션을 <option> 태그로 변환 */}
-            {options.map(({value, label}) => (
-                <option key={value} value={value}>
+            {options.map(({value, label}, index) => (
+                <option key={`${value} - ${index}`} value={value}>
                     {/* rest 객체 내 addDaySuffix가 true면 날짜에 '일' 접미사를 추가 */}
-                    {rest.addDaySuffix ? `${label}일` : label}
+                    {addDaySuffix ? `${label}일` : label}
                 </option>
             ))}
         </select>

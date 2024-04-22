@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+## Lexus Website Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 프로젝트는 렉서스의 공식 웹사이트를 클론하여 제작된 웹 애플리케이션입니다.
 
-## Available Scripts
+사용자는 렉서스의 다양한 차량 모델을 탐색하고, 개인화된 차량 구성을 만들며,
 
-In the project directory, you can run:
+로그인, 마이 어카운트 접근, 시승 신청 등의 기능을 이용할 수 있습니다.
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 기능
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 모델별 소개: 렉서스의 각 차량 모델에 대한 상세 정보 제공. 
+- 내 차량 만들기: 사용자가 선호하는 옵션을 선택하여 개인화된 차량 구성. 
+- 로그인: Google 계정을 이용한 로그인 기능. 
+- 마이 어카운트: 사용자 계정 관리 및 설정. 
+- 시승 신청: 원하는 차량 모델에 대한 시승 신청.
 
-### `yarn test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기술 스택
 
-### `yarn build`
+- 프론트엔드: React, JavaScript, SCSS 
+- 백엔드: Firebase (Authentication, Firestore Database, Hosting)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 프로젝트 구조
+```text
+/src
+    /components        # 재사용 가능한 UI 컴포넌트
+    /hooks             # 커스텀 훅
+    /data              # 데이터 모델
+    /pages             # 각 페이지 컴포넌트
+    /scss              # SCSS 스타일 시트
+    /utils             # 유틸리티 코드
+    App.js             # 메인 애플리케이션 컴포넌트
+    index.js           # 엔트리 포인트
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 로컬 개발 시작하기
 
-### `yarn eject`
+이 프로젝트를 로컬 환경에서 실행하기 위한 단계입니다
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. 리포지토리 클론
+```text
+git clone https://your-repository-url.com
+cd react-shopping
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. 의존성 설치
+```text
+yarn install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. 로컬 서버에서 애플리케이션 실행
+```text
+yarn start
+```
