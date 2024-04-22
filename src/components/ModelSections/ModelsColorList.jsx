@@ -3,8 +3,7 @@ import {useColorSelector} from "../../hooks/useElementSelector";
 import useModelSettings from "../../hooks/useModelSettings";
 
 export default function ModelsColorList({...rest}) {
-    const {title, colorList} = rest
-    const [currentColor, handleColorChange] = useColorSelector(colorList[0].color);
+    const {title, colorList, selectedColor, onColorChange} = rest
 
     return (
         <div className="top_wrapper">
@@ -21,8 +20,8 @@ export default function ModelsColorList({...rest}) {
                     >
                         <button
                             style={{backgroundColor: item.rgb}}
-                            className={`color_button ${item.color === currentColor ? 'active' : ''}`}
-                            onClick={() => handleColorChange(item.color)}
+                            className={`color_button ${item.color === selectedColor ? 'active' : ''}`}
+                            onClick={() => onColorChange(item.color)}
                         >
                         </button>
                     </li>
@@ -31,7 +30,7 @@ export default function ModelsColorList({...rest}) {
 
             {/* 옵션이 적용시 추가되는 금액 */}
             <div className="detail_text">
-                <span className="color_name">{currentColor}</span>
+                <span className="color_name">{selectedColor}</span>
                 <span><span className="price_tag">+0</span> 원</span>
             </div>
         </div>

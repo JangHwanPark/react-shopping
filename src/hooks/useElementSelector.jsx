@@ -1,12 +1,15 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 
-// 사용법: const [currentColor, setCurrentColor, handleColorChange] = useColorSelector(defaultColor);
-export function useColorSelector(defaultColor) {
+// 사용법: const {currentColor, handleColorChange} = useColorSelector({exterior: defaultExteriorColor, interior: defaultInteriorColor});
+export function useColorSelector(defaultColors) {
+    const [colors, setColors] = useState(defaultColors);
 
-    const [selectedColor, setSelectedColor] = useState(defaultColor);
-    const handleColorChange = (newColor) => {
-        setSelectedColor(newColor);
+    const handleColorChange = (type, newColor) => {
+        setColors(prevColors => ({
+            ...prevColors,
+            [type]: newColor
+        }));
     };
 
-    return [selectedColor, setSelectedColor, handleColorChange];
+    return {colors, handleColorChange};
 }

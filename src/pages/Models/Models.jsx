@@ -12,8 +12,6 @@ import Title from "../../components/Title/Title";
 export default function Models() {
     const {currentTab, setCurrentTab} = useTab();
 
-    // DebugLog
-    console.log(models[currentTab]);
     return (
         <ModelLayout
             title={'구매 차량 선택'}
