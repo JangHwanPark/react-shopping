@@ -23,7 +23,6 @@ import React from 'react';
  * />
  */
 export default function SelectMenu({className, options, name, value, onChange, defaultOption, addDaySuffix}) {
-    console.log('SelectMenu name: ', name)
     return (
         <select className={className} value={value} name={name} onChange={onChange}>
             {/* defaultOption 이 제공되면, 사용자가 다른 옵션을 선택하기 전에 표시할 기본 옵션을 추가 */}

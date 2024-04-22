@@ -1,7 +1,9 @@
 // 선택완료 섹션 컴포넌트
 import React from "react";
 
-export function FinalizeSection({ modelId, selectedExterior, selectedInterior, modelGrade, estimatedPrice }) {
+export function FinalizeSection({ ...rest }) {
+    const { modelId, selectedExterior, selectedInterior, modelGrade, estimatedPrice } = rest;
+    console.log(rest)
     return (
         <div className={'model_finalize flex-column'}>
             <h2>선택완료</h2>

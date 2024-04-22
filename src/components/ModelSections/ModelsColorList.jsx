@@ -1,7 +1,8 @@
 import React from 'react';
 import {useColorSelector} from "../../hooks/useElementSelector";
+import useModelSettings from "../../hooks/useModelSettings";
 
-export default function ColorList({...rest}) {
+export default function ModelsColorList({...rest}) {
     const {title, colorList} = rest
     const [currentColor, handleColorChange] = useColorSelector(colorList[0].color);
 

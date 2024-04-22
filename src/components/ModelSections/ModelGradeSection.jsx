@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 // 모델 및 등급 섹션 컴포넌트
 export function ModelGradeSection({ onModelGradeChange }) {

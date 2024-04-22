@@ -6,5 +6,10 @@ export default function useSectionNavigation(initialSection = 0) {
     const nextSection = () => setSelectedSectionIndex(prev => prev + 1);
     const prevSection = () => setSelectedSectionIndex(prev => prev - 1);
 
-    return [selectedSectionIndex, nextSection, prevSection];
+    return [
+        selectedSectionIndex,
+        setSelectedSectionIndex,
+        nextSection,
+        prevSection
+    ];
 }

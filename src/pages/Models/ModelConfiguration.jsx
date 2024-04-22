@@ -4,7 +4,7 @@ import models from "../../data/models.json";
 import ProductInformation from "../../components/ProductsInformation/ProductInformation";
 import StatefulTab from "../../components/TabComponents/StatefulTab";
 import ModelConfigButton from "../../components/Button/ModelConfigButton";
-import ConfigurationContainer from "../../components/TabComponents/ModelSections";
+import ConfigurationContainer from "../../components/TabComponents/ConfigurationContainer";
 import SelectMenu from "../../components/Select/SelectMenu";
 import useModelSettings from "../../hooks/useModelSettings";
 import useSectionNavigation from "../../hooks/useSectionNavigation";
@@ -14,18 +14,26 @@ import {fieldMappings} from "../../data/my_car";
 
 export default function ModelConfiguration() {
     const { modelId } = useParams();
-    const [selectedModel, handleModelChange, currentTab] = useModelTab(modelId);
-    const [selectedSectionIndex, nextSection, prevSection] = useSectionNavigation();
+    const [
+        selectedModel,
+        handleModelChange,
+        currentTab
+    ] = useModelTab(modelId);
+
+    const [
+        selectedSectionIndex,
+        setSelectedSectionIndex,
+        nextSection,
+        prevSection
+    ] = useSectionNavigation();
+
     const {
         modelGrade,
         setModelGrade,
-        selectedExterior,
-        setSelectedExterior,
-        selectedInterior,
-        setSelectedInterior,
         estimatedPrice,
         setEstimatedPrice
     } = useModelSettings(models[currentTab]?.basePrice || 0);
+
     const sections = ['모델 및 등급', '익스테리어', '인테리어', '선택완료'];
 
     return (
@@ -67,7 +75,7 @@ export default function ModelConfiguration() {
                             <StatefulTab
                                 key={index}
                                 title={sectionName}
-                                onClick={() => selectedSectionIndex(index)}
+                                onClick={() => setSelectedSectionIndex(index)}
                                 isSelected={selectedSectionIndex === index}
                             />
                         ))}
@@ -92,13 +100,9 @@ export default function ModelConfiguration() {
                                 <ConfigurationContainer
                                     modelId={modelId}
                                     selectedSection={sections[selectedSectionIndex]}
-                                    selectedExterior={selectedExterior}
-                                    selectedInterior={selectedInterior}
                                     modelGrade={modelGrade}
                                     estimatedPrice={estimatedPrice}
                                     onModelGradeChange={setModelGrade}
-                                    onExteriorChange={setSelectedExterior}
-                                    onInteriorChange={setSelectedInterior}
                                 />
                             }
                         </div>
