@@ -10,10 +10,10 @@
 @use "src/scss/components/productsCard";
 @use "src/scss/components/select";
 @use "src/scss/components/title";
-@use "src/scss/layout/flex";
-@use "src/scss/layout/header";
-@use "src/scss/layout/footer";
-@use "src/scss/layout/modelLayout";
+@use "layout/Flex";
+@use "layout/Header";
+@use "layout/Footer";
+@use "layout/ModelLayout";
 @use "pages/account";
 @use "pages/home";
 @use "pages/login";

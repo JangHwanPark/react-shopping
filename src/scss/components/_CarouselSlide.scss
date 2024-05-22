@@ -61,3 +61,15 @@
 .slide_element {
   height: 100%;
 }
+
+// Media (Responsive - Mobile)
+@media screen and (max-width: 768px) {
+  .slide_element {
+    flex: 0 0 100%; /* 각 슬라이드는 뷰포트 너비와 동일하게 설정 */
+    overflow: hidden; /* 이미지가 div 크기를 넘지 않도록 설정 */
+
+    img {
+      width: 768px;
+    }
+  }
+}

@@ -1,10 +1,16 @@
 import React from 'react';
 import models from "../../data/models.json";
-
 import {Link} from "react-router-dom";
+
 import {useAuth} from "../../context/AuthContext";
 import {useTab} from "../../context/TabContext";
 import {handleSignOut} from "../../utils/fbInstance";
+
+const linkList = [
+    {path: "/models", label: "MODEL"},
+    {path: "/model", label: "내 차 만들기"},
+    {path: "/test-drive", label: "시승신청"},
+]
 
 export default function Header() {
     const {user} = useAuth();
@@ -38,13 +44,11 @@ export default function Header() {
                                     MY ACCOUNT
                                 </Link>
                             </li>
-                            {/*<li className={'item'}>
-                                <Link to="/login">{user ? "LOGOUT" : "LOGIN"}</Link>
-                            </li>*/}
                             <li className={'item'}>
-                                <button onClick={handleSignOut}>
-                                    LOGOUT
-                                </button>
+                                {user
+                                    ? <button onClick={handleSignOut}>LOGOUT</button>
+                                    : <Link to="/login">{"LOGIN"}</Link>
+                                }
                             </li>
                         </ul>
                     </nav>

@@ -15,10 +15,10 @@
 @use "src/scss/components/title";
 
 // Layout
-@use "src/scss/layout/flex";
-@use "src/scss/layout/header";
-@use "src/scss/layout/footer";
-@use "src/scss/layout/modelLayout";
+@use "layout/Flex";
+@use "layout/Header";
+@use "layout/Footer";
+@use "layout/ModelLayout";
 
 // Page
 @use "pages/account";

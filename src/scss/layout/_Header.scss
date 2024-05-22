@@ -25,6 +25,8 @@
 
   .item_list .item {
     padding: 0 1rem;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -32,4 +34,24 @@
   padding: 0 .5rem;
   display: flex;
   justify-content: space-between;
+}
+
+// Media (Responsive - Mobile)
+@media screen and (max-width: 768px) {
+  .inner_header {
+    width: 100%;
+    padding: .5rem;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .item_list {
+    display: none;
+
+    .item {
+      font-size: .5rem;
+    }
+  }
 }
